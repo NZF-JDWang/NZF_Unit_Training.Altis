@@ -15,6 +15,8 @@ medBoard_4 setObjectTextureGlobal [0, "media\images\med_Module\selfTend.paa"];
 medBoard_5 setObjectTextureGlobal [0, "media\images\med_Module\buddy.paa"];
 medBoard_6 setObjectTextureGlobal [0, "media\images\med_Module\drugs.paa"];
 
+liveFireBoard setObjectTextureGlobal [0, "media\images\med_Module\liveFire.paa"];
+
 diveBoard setObjectTextureGlobal [0, "media\images\diveInfo.jpg"];
 
 introBoard setObjectTextureGlobal [0, "media\images\welcome.paa"];
@@ -23,3 +25,6 @@ moraleBoard setObjectTextureGlobal [0, "media\images\garbage.paa"];
 
 shoothouseSign_1 setObjectTextureGlobal [0, "media\images\shoothouse1.paa"];
 shoothouseSign_2 setObjectTextureGlobal [0, "media\images\shoothouse2.paa"];
+
+
+

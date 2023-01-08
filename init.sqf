@@ -15,6 +15,7 @@ hotel = false;
     sleep 0.5;
     };
 };
+liveFireMedical = false;
 stretcher_1 setVariable ["discharge", true, true];
 stretcher_2 setVariable ["discharge", true, true];
 stretcher_3 setVariable ["discharge", true, true];

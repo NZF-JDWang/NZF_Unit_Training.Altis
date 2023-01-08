@@ -1,7 +1,7 @@
 
 params [["_patient", objNull], ["_difficulty", 0]];
 
-[_patient, true, round(random 300), true] call ace_medical_fnc_setUnconscious;
+[_patient, true, 600, true] call ace_medical_fnc_setUnconscious;
 
 if (isNull _patient) exitWith {};
 
@@ -15,7 +15,7 @@ if (isNull _patient) exitWith {};
   	"explosive", "vehiclecrash", "collision", "grenade", "shell", "bullet", "backblast", "bite"
   ];
 
-_bloodtype = selectRandom ["O", "A", "B", "AB"];
+_bloodtype = selectRandom ["O", "A", "B", "AB","O_N", "A_N", "B_N", "AB_N"];
 _patient setVariable ["kat_circulation_bloodtype", _bloodtype, true];
 
 switch (_difficulty) do
@@ -34,7 +34,7 @@ switch (_difficulty) do
 		if (random 10 < 5 ) then 
 		{_patient setVariable ["kat_airway_obstruction", true, true]}
 		else 
-		{_patient setVariable ["KAT_medical_airwayOccluded", true, true]};
+		{_patient setVariable ["KAT_airway_occluded", true, true]};
   };
 
   case 2:
@@ -49,11 +49,11 @@ switch (_difficulty) do
 		if (random 10 < 5 ) then 
 		{_patient setVariable ["kat_airway_obstruction", true, true]}
 		else 
-		{_patient setVariable ["KAT_medical_airwayOccluded", true, true]};
+		{_patient setVariable ["KAT_airway_occluded", true, true]};
 
 		[_patient, 0.5] call ace_medical_status_fnc_adjustPainLevel;
 		[_patient] call kat_breathing_fnc_handleBreathing;
-		_patient setVariable ["KAT_medical_pneumothorax", true, true]; 
+		_patient setVariable ["KAT_breathing_pneumothorax", true, true]; 
   };
   case 3:
   {
@@ -67,29 +67,32 @@ switch (_difficulty) do
 		if (random 10 < 5 ) then 
 		{_patient setVariable ["kat_airway_obstruction", true, true]}
 		else 
-		{_patient setVariable ["KAT_medical_airwayOccluded", true, true]};
+		{_patient setVariable ["KAT_airway_occluded", true, true]};
 
 	  	[_patient, 0.7] call ace_medical_status_fnc_adjustPainLevel;
 		[_patient] call kat_breathing_fnc_handleBreathing;
-		_patient setVariable ["KAT_medical_hemopneumothorax", true, true];
+		_patient setVariable ["KAT_breathing_hemopneumothorax", true, true];
   };
 
   case 4:
 	  {
+		[_patient, 3, "body", "bullet"] call ace_medical_fnc_addDamageToUnit;
 		[_patient, 0.5] call ace_medical_status_fnc_adjustPainLevel;
 		[_patient] call kat_breathing_fnc_handleBreathing;
-		_patient setVariable ["KAT_medical_pneumothorax", true, true];
+		_patient setVariable ["KAT_breathing_pneumothorax", true, true];
  	 };
   case 5:
 	  {
+		[_patient, 3, "body", "bullet"] call ace_medical_fnc_addDamageToUnit;
 		[_patient, 0.7] call ace_medical_status_fnc_adjustPainLevel;
 		[_patient] call kat_breathing_fnc_handleBreathing;
-		_patient setVariable ["KAT_medical_hemopneumothorax", true, true];
+		_patient setVariable ["KAT_breathing_hemopneumothorax", true, true];
  	 };
   case 6:
  	 {
+		[_patient, 3, "body", "bullet"] call ace_medical_fnc_addDamageToUnit;
 	  	[_patient, 0.7] call ace_medical_status_fnc_adjustPainLevel;
 		[_patient] call kat_breathing_fnc_handleBreathing;
-		_patient setVariable ["KAT_medical_tensionpneumothorax", true, true];
+		_patient setVariable ["KAT_breathing_tensionpneumothorax", true, true];
 	};
 };
