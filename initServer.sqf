@@ -17,6 +17,8 @@ medBoard_6 setObjectTextureGlobal [0, "media\images\med_Module\drugs.paa"];
 
 liveFireBoard setObjectTextureGlobal [0, "media\images\med_Module\liveFire.paa"];
 
+doridaBoard setObjectTextureGlobal [0, "media\images\dorida.paa"];
+
 diveBoard setObjectTextureGlobal [0, "media\images\diveInfo.jpg"];
 
 introBoard setObjectTextureGlobal [0, "media\images\welcome.paa"];

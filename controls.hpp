@@ -55,7 +55,7 @@ class nzfTrainingDialog
 				y = 0.357 * safezoneH + safezoneY;
 				w = 0.0567187 * safezoneW;
 				h = 0.033 * safezoneH;
-				tooltip = "Open aresenal using the role selected on the left ";
+				tooltip = "Open arsenal using the role selected on the left ";
 				action = "execVM 'scripts\arsenalMenu.sqf'"; 
 			};
 			class nzfButtonHeal: RscButton

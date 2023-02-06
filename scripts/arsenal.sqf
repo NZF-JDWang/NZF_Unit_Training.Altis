@@ -540,6 +540,7 @@ _drugs = [
 	"kat_larynx",	
 	"ACE_personalAidKit",	
 	"kat_X_AED",
+	"kat_AED",
 	"kat_amiodarone",
 	"kat_lidocaine",
 	"kat_phenylephrine"

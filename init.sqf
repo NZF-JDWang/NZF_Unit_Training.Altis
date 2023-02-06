@@ -7,6 +7,7 @@ sofia = false;
 chalkeia = false;
 negades = false;
 hotel = false;
+liveFireMedical = false;
 
 [] execVM "eos\OpenMe.sqf";
 
@@ -15,7 +16,7 @@ hotel = false;
     sleep 0.5;
     };
 };
-liveFireMedical = false;
+
 stretcher_1 setVariable ["discharge", true, true];
 stretcher_2 setVariable ["discharge", true, true];
 stretcher_3 setVariable ["discharge", true, true];
@@ -37,7 +38,8 @@ nzf_trainingModules = [
     "MOUT- Therisa",
     "MOUT- Sofia",
     "MOUT- Chalkeia",
-    "Assault Ghost Hotel"
+    "Assault Ghost Hotel",
+    "Dorida Defense"
 ];
 
 nzf_roles = [

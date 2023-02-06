@@ -24,7 +24,7 @@ VictoryColor="ColorWEST";	// Colour of marker after completion
 hostileColor="ColorEAST";	// Default colour when enemies active
 bastionColor="colorOrange";	// Colour for bastion marker
 EOS_DAMAGE_MULTIPLIER=1;	// 1 is default
-EOS_KILLCOUNTER=true;		// Counts killed units
+EOS_KILLCOUNTER = true;		// Counts killed units
 
 /*
 To reinforce an area, just run  the inital code again with the forces you want to reinforce the area
@@ -35,4 +35,4 @@ Would add another 2 house groups and 1 patrol to the area.
 //Sector 0
 null = [["EOS_GhostHotel"],[8,1,75],[2,2,100],[1,1,50],[0,0],[0,0],[0,0,0],[0,1,1500,EAST,true,false]] call EOS_Spawn;
 
-
+null = [["BAS_zone_1"],[5,1],[2,1],[1],[1,0],[0,1,EAST,true,false],[60,10,300,TRUE,TRUE]] call Bastion_Spawn;

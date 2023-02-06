@@ -17,7 +17,7 @@ _eosZone=_basSettings select 3;
 _hints=_basSettings select 4;
 _initialLaunch= if (count _this > 7) then {_this select 7} else {false};
 
-_Placement=(_mkrX + 500);
+_Placement=(_mkrX + 250);
 
 	if (_mA==0) then {_mAH = 1;_mAN = 0.5;};
 	if (_mA==1) then {_mAH = 0;_mAN = 0;};

@@ -9,7 +9,7 @@
 //Load arsenals
 arsenal_1 execVM "scripts\arsenal.sqf"; 
 
-_actionMenu = ["menu","Training Menu","",{execVM "scripts\trainingMenu.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+_actionMenu = ["menu","Training Menu","",{execVM "scripts\trainingMenu.sqf"},{!(player inArea "BAS_zone_1")}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions"], _actionMenu] call ace_interact_menu_fnc_addActionToObject;
 
 //Make sure players come into the mission with only what we have the set as in the editor
@@ -21,7 +21,7 @@ removeHeadgear player;
 if (squadParams player select 0 select 0 == "NZF") then {player addHeadgear "nzf_beret_black_silver"} else {player addHeadgear ""};
 
 //Make players less visible to the AI and add the blood patch 
-[] spawn NZF_fnc_camo;
+
 player spawn NZF_fnc_bloodpatch;
 
 // Setup INCON Undercover 

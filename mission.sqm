@@ -5,29 +5,29 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1537;
+	toggles=1546;
 	mods[]=
 	{
 		"rid_eden"
 	};
 	class ItemIDProvider
 	{
-		nextID=3112;
+		nextID=3139;
 	};
 	class MarkerIDProvider
 	{
-		nextID=39;
+		nextID=40;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1535;
+		nextID=1807;
 	};
 	class Camera
 	{
-		pos[]={21731.395,18.717802,7512.2515};
-		dir[]={0.66356719,-0.70521939,-0.24972403};
-		up[]={0.66002905,0.70898759,-0.24839212};
-		aside[]={-0.35222229,-8.6889486e-008,-0.93592435};
+		pos[]={23455.377,339.00467,13883.617};
+		dir[]={-0.90779817,-0.33118552,0.25743935};
+		up[]={-0.31862929,0.94355524,0.090359338};
+		aside[]={0.27283689,9.1313268e-009,0.96209145};
 	};
 };
 binarizationWanted=0;
@@ -95,6 +95,7 @@ addons[]=
 	"plp_containers",
 	"A3_Structures_F_Civ_InfoBoards",
 	"SSS_module",
+	"USAF_AC130U_C",
 	"FIR_A10C_F",
 	"FIR_F16_F",
 	"RHSGREF_c_A29",
@@ -173,13 +174,15 @@ addons[]=
 	"UK3CB_Factions_Weapons_MG3",
 	"rhsusf_c_troops",
 	"rhsusf_c_weapons",
-	"A3_Structures_F_Mil_BagFence"
+	"A3_Structures_F_Mil_BagFence",
+	"A3_Structures_F_EPA_Walls",
+	"A3_Modules_F_Curator_Environment"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=108;
+		items=109;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -524,359 +527,364 @@ class AddonsMetaData
 		};
 		class Item54
 		{
+			className="USAF_AC130U_C";
+			name="USAF_AC130U_C";
+		};
+		class Item55
+		{
 			className="FIR_A10C_F";
 			name="FIR_A10C_F";
 		};
-		class Item55
+		class Item56
 		{
 			className="FIR_F16_F";
 			name="FIR_F16_F";
 		};
-		class Item56
+		class Item57
 		{
 			className="RHSGREF_c_A29";
 			name="GREF Super Tucano";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item57
+		class Item58
 		{
 			className="ace_cargo";
 			name="ACE3 - Cargo";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item58
+		class Item59
 		{
 			className="A3_Structures_F_Exp_Civilian";
 			name="Arma 3 Apex - Civilian Buildings";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item59
+		class Item60
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item60
+		class Item61
 		{
 			className="A3_Structures_F_Argo";
 			name="Arma 3 Malden - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item61
+		class Item62
 		{
 			className="A3_Structures_F_Wrecks";
 			name="Arma 3 - Vehicle Wrecks";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item62
+		class Item63
 		{
 			className="A3_Structures_F_EPA";
 			name="Arma 3 Survive Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item63
+		class Item64
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item64
+		class Item65
 		{
 			className="CUP_CAStructures_E_HouseC";
 			name="CUP_CAStructures_E_HouseC";
 		};
-		class Item65
+		class Item66
 		{
 			className="A3_Static_F";
 			name="Arma 3 Alpha - Turrets";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item66
+		class Item67
 		{
 			className="A3_Structures_F_Heli";
 			name="Arma 3 Helicopters - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item67
+		class Item68
 		{
 			className="rhs_c_bmp";
 			name="BMP-1 & 2 IFV";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item68
+		class Item69
 		{
 			className="rhs_c_cars";
 			name="Tigr vehicles";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item69
+		class Item70
 		{
 			className="rhs_c_kamaz";
 			name="KamAZ 5350";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item70
+		class Item71
 		{
 			className="rhs_c_t72";
 			name="T-72 Series Tanks";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item71
+		class Item72
 		{
 			className="ace_compat_rhs_afrf3";
 			name="ACE3 - RHS AFRF Compatibility";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item72
+		class Item73
 		{
 			className="UK3CB_Factions_TKM";
 			name="3CB Factions - TKM";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item73
+		class Item74
 		{
 			className="rhs_c_tanks";
 			name="T-80 Series Tanks";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item74
+		class Item75
 		{
 			className="A3_Structures_F_Bootcamp";
 			name="Arma 3 Bootcamp Update - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item75
+		class Item76
 		{
 			className="rhs_logo";
 			name="rhs_logo";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item76
+		class Item77
 		{
 			className="rhsusf_c_markvsoc";
 			name="Mark V SOC";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item77
+		class Item78
 		{
 			className="UK3CB_BAF_Vehicles_RHIB";
 			name="UK3CB_BAF_Vehicles_RHIB";
 		};
-		class Item78
+		class Item79
 		{
 			className="A3_Boat_F_Beta";
 			name="Arma 3 Beta - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item79
+		class Item80
 		{
 			className="HAFM_Navy_Config";
 			name="HAFM_Navy_Config";
 		};
-		class Item80
+		class Item81
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item81
+		class Item82
 		{
 			className="rhsusf_c_m11xx";
 			name="M1151/M1152/M1165";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item82
+		class Item83
 		{
 			className="rhsusf_c_MATV";
 			name="MATV MRAP";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item83
+		class Item84
 		{
 			className="grad_civs_common";
 			name="common";
 			author="AUTHOR";
 		};
-		class Item84
+		class Item85
 		{
 			className="rhs_c_a2port_car";
 			name="A2 ported cars";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item85
+		class Item86
 		{
 			className="rhs_c_btr";
 			name="BTR-70 & 80";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item86
+		class Item87
 		{
 			className="UK3CB_Factions_Vehicles_2S6M_Tunguska";
 			name="UK3CB_Factions_Vehicles_2S6M_Tunguska";
 		};
-		class Item87
+		class Item88
 		{
 			className="rhs_c_a2port_armor";
 			name="A2 ported armor";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item88
+		class Item89
 		{
 			className="UK3CB_Factions_UN";
 			name="3CB Factions - UN";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item89
+		class Item90
 		{
 			className="rhs_c_2s3";
 			name="2S3 SPG";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item90
+		class Item91
 		{
 			className="A3_Static_F_Destroyer";
 			name="CFGPATCHES_A3_Static_F_Destroyer";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item91
+		class Item92
 		{
 			className="rhsusf_c_statics";
 			name="RHSUSF Static Weapons";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item92
+		class Item93
 		{
 			className="rhsusf_c_m109";
 			name="M109A6 SPH";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item93
+		class Item94
 		{
 			className="A3_Boat_F_Destroyer";
 			name="Arma 3 Jets - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item94
+		class Item95
 		{
 			className="A3_Structures_F_Orange";
 			name="Arma 3 Orange - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item95
+		class Item96
 		{
 			className="kat_misc";
 			name="KAT - KAT - MISC";
 			author="Katalam";
 			url="https://github.com/Tomcat-SG/KAM";
 		};
-		class Item96
+		class Item97
 		{
 			className="plp_urban_barriers";
 			name="plp_urban_barriers";
 		};
-		class Item97
+		class Item98
 		{
 			className="acre_main";
 			name="ACRE2 - Main";
 			author="ACRE2Team";
 			url="https://github.com/IDI-Systems/acre2";
 		};
-		class Item98
+		class Item99
 		{
 			className="ace_medical_engine";
 			name="ACE3 - Medical Engine";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item99
+		class Item100
 		{
 			className="ace_medical_treatment";
 			name="ACE3 - Medical Treatment";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item100
+		class Item101
 		{
 			className="3den_Objects";
 			name="3den_Objects";
 		};
-		class Item101
+		class Item102
 		{
 			className="ace_slideshow";
 			name="ACE3 - Slideshow";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item102
+		class Item103
 		{
 			className="UK3CB_Factions_AAF";
 			name="3CB Factions - AAF";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item103
+		class Item104
 		{
 			className="UK3CB_Factions_Weapons";
 			name="3CB Factions - Weapons";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item104
+		class Item105
 		{
 			className="ace_scopes";
 			name="ACE3 - Scopes";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item105
+		class Item106
 		{
 			className="ace_optics";
 			name="ACE3 - Optics";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item106
+		class Item107
 		{
 			className="rhsusf_c_troops";
 			name="RHSUSF Infantry & Equipment";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item107
+		class Item108
 		{
 			className="rhsusf_c_weapons";
 			name="RHSUSF Weapons & Accessories";
@@ -34512,11 +34520,11 @@ class Mission
 		forecastLightnings=0.1;
 		wavesForced=1;
 		windForced=1;
-		year=2035;
+		year=2023;
 		month=6;
-		day=24;
-		hour=11;
-		minute=23;
+		day=23;
+		hour=12;
+		minute=0;
 		startFogBase=-1000;
 		forecastFogBase=-1000;
 		startFogDecay=0;
@@ -34524,7 +34532,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=94;
+		items=80;
 		class Item0
 		{
 			dataType="Layer";
@@ -73267,7 +73275,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=110;
+				items=111;
 				class Item0
 				{
 					dataType="Object";
@@ -76127,9 +76135,25 @@ class Mission
 						nAttributes=7;
 					};
 				};
+				class Item110
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14793.988,23.768976,16807.844};
+						angles[]={0,2.3265841,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=3124;
+					type="USAF_AC130U";
+				};
 			};
 			id=1519;
-			atlOffset=381.10037;
+			atlOffset=187.51689;
 		};
 		class Item6
 		{
@@ -105820,7 +105844,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={16244.72,13.996998,16916.713};
-				angles[]={0.0013372133,0,6.2738566};
+				angles[]={0.0013439035,0,6.2738476};
 			};
 			id=2503;
 			type="ModuleCurator_F";
@@ -106367,6 +106391,7 @@ class Mission
 					};
 					id=3007;
 					type="EmptyDetectorAreaR250";
+					atlOffset=0.30773926;
 				};
 				class Item11
 				{
@@ -115325,8 +115350,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20911.77,11.430685,19236.287};
-						angles[]={0,1.1293056,0.0012918707};
+						position[]={20909.678,11.428324,19235.273};
+						angles[]={0,1.1293056,0};
 					};
 					side="Empty";
 					flags=4;
@@ -115337,6 +115362,7 @@ class Mission
 					};
 					id=3089;
 					type="Land_InfoStand_V2_F";
+					atlOffset=-9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -115373,7 +115399,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20911.84,11.881454,19236.32};
+						position[]={20909.748,11.879001,19235.307};
 						angles[]={0,4.2401376,0};
 					};
 					side="Empty";
@@ -115434,7 +115460,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20912.1,11.883854,19236.414};
+						position[]={20910.008,11.881066,19235.4};
 						angles[]={0,1.1263832,0};
 					};
 					side="Empty";
@@ -115479,7 +115505,7 @@ class Mission
 				};
 			};
 			id=2662;
-			atlOffset=0.29191589;
+			atlOffset=0.29010963;
 		};
 		class Item61
 		{
@@ -116713,1276 +116739,6 @@ class Mission
 		};
 		class Item67
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={20900.289,10.837553,19213.508};
-				angles[]={0,5.8306737,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				name="tp_0";
-				disableSimulation=1;
-			};
-			id=2832;
-			type="VR_Area_01_square_1x1_yellow_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectTextureCustom0";
-					expression="_this setObjectTextureGlobal [0,_value]";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="#(argb,8,8,3)color(0,0,0,0,ca)";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rid_eden_objectID";
-					expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=2832;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item68
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={15091.762,17.887739,17269.191};
-				angles[]={0.0039967569,5.5202146,0.0039967569};
-			};
-			side="Empty";
-			flags=1;
-			class Attributes
-			{
-				name="tp_1";
-				disableSimulation=1;
-			};
-			id=2834;
-			type="VR_Area_01_square_1x1_yellow_F";
-			atlOffset=0.036962509;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectTextureCustom0";
-					expression="_this setObjectTextureGlobal [0,_value]";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="#(argb,8,8,3)color(0,0,0,0,ca)";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rid_eden_objectID";
-					expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=2834;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item69
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={23050.158,3.1905,17205.75};
-				angles[]={0,2.3000996,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				name="tp_2";
-				disableSimulation=1;
-			};
-			id=2835;
-			type="VR_Area_01_square_1x1_yellow_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectTextureCustom0";
-					expression="_this setObjectTextureGlobal [0,_value]";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="#(argb,8,8,3)color(0,0,0,0,ca)";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rid_eden_objectID";
-					expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=2835;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item70
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={22610.234,3.1874797,18235.268};
-				angles[]={0,0.81081015,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				name="tp_3";
-				disableSimulation=1;
-			};
-			id=2836;
-			type="VR_Area_01_square_1x1_yellow_F";
-			atlOffset=-2.3841858e-007;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectTextureCustom0";
-					expression="_this setObjectTextureGlobal [0,_value]";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="#(argb,8,8,3)color(0,0,0,0,ca)";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rid_eden_objectID";
-					expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=2836;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item71
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={14759.64,17.9105,16702.758};
-				angles[]={0,3.9345829,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				name="tp_4";
-				disableSimulation=1;
-			};
-			id=2837;
-			type="VR_Area_01_square_1x1_yellow_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectTextureCustom0";
-					expression="_this setObjectTextureGlobal [0,_value]";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="#(argb,8,8,3)color(0,0,0,0,ca)";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rid_eden_objectID";
-					expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=2837;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item72
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={16361.401,2.3955677,12466.578};
-				angles[]={0,4.7866178,0};
-			};
-			side="Empty";
-			flags=1;
-			class Attributes
-			{
-				name="tp_5";
-				disableSimulation=1;
-			};
-			id=2838;
-			type="VR_Area_01_square_1x1_yellow_F";
-			atlOffset=0.085141182;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectTextureCustom0";
-					expression="_this setObjectTextureGlobal [0,_value]";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="#(argb,8,8,3)color(0,0,0,0,ca)";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rid_eden_objectID";
-					expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=2838;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item73
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={13196.633,19.914925,13484.473};
-				angles[]={0,3.8179951,0};
-			};
-			side="Empty";
-			flags=1;
-			class Attributes
-			{
-				name="tp_6";
-				disableSimulation=1;
-			};
-			id=2839;
-			type="VR_Area_01_square_1x1_yellow_F";
-			atlOffset=0.049684525;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectTextureCustom0";
-					expression="_this setObjectTextureGlobal [0,_value]";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="#(argb,8,8,3)color(0,0,0,0,ca)";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rid_eden_objectID";
-					expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=2839;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item74
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11210.637,182.41051,8712.0068};
-				angles[]={0,5.4065762,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				name="tp_7";
-				disableSimulation=1;
-			};
-			id=2840;
-			type="VR_Area_01_square_1x1_yellow_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectTextureCustom0";
-					expression="_this setObjectTextureGlobal [0,_value]";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="#(argb,8,8,3)color(0,0,0,0,ca)";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rid_eden_objectID";
-					expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=2840;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item75
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={14298.014,19.327454,16286.795};
-				angles[]={0,6.0771837,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				name="tp_8";
-				disableSimulation=1;
-			};
-			id=2841;
-			type="VR_Area_01_square_1x1_yellow_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectTextureCustom0";
-					expression="_this setObjectTextureGlobal [0,_value]";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="#(argb,8,8,3)color(0,0,0,0,ca)";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rid_eden_objectID";
-					expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=2841;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item76
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={20112.91,23.61784,22804.736};
-				angles[]={0,3.5881701,0};
-			};
-			side="Empty";
-			flags=1;
-			class Attributes
-			{
-				name="tp_9";
-				disableSimulation=1;
-			};
-			id=2849;
-			type="VR_Area_01_square_1x1_yellow_F";
-			atlOffset=0.040756226;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectTextureCustom0";
-					expression="_this setObjectTextureGlobal [0,_value]";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="#(argb,8,8,3)color(0,0,0,0,ca)";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rid_eden_objectID";
-					expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=2849;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item77
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={15501.397,16.678883,14945.372};
-				angles[]={0,6.2799563,0};
-			};
-			side="Empty";
-			flags=1;
-			class Attributes
-			{
-				name="tp_10";
-				disableSimulation=1;
-			};
-			id=2855;
-			type="VR_Area_01_square_1x1_yellow_F";
-			atlOffset=0.040393829;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectTextureCustom0";
-					expression="_this setObjectTextureGlobal [0,_value]";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="#(argb,8,8,3)color(0,0,0,0,ca)";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rid_eden_objectID";
-					expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=2855;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item78
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4235.71,72.130432,15808.603};
-				angles[]={0,2.0108986,0};
-			};
-			side="Empty";
-			flags=1;
-			class Attributes
-			{
-				name="tp_11";
-				disableSimulation=1;
-			};
-			id=2856;
-			type="VR_Area_01_square_1x1_yellow_F";
-			atlOffset=0.041007996;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectTextureCustom0";
-					expression="_this setObjectTextureGlobal [0,_value]";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="#(argb,8,8,3)color(0,0,0,0,ca)";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rid_eden_objectID";
-					expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=2856;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item79
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11598.296,23.641897,11980.655};
-				angles[]={0,5.2431259,0};
-			};
-			side="Empty";
-			flags=1;
-			class Attributes
-			{
-				name="tp_12";
-				disableSimulation=1;
-			};
-			id=2857;
-			type="VR_Area_01_square_1x1_yellow_F";
-			atlOffset=0.040000916;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectTextureCustom0";
-					expression="_this setObjectTextureGlobal [0,_value]";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="#(argb,8,8,3)color(0,0,0,0,ca)";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rid_eden_objectID";
-					expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=2857;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item80
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={24874.365,20.66461,20840.061};
-				angles[]={0,5.9280806,0};
-			};
-			side="Empty";
-			flags=1;
-			class Attributes
-			{
-				name="tp_13";
-				disableSimulation=1;
-			};
-			id=2858;
-			type="VR_Area_01_square_1x1_yellow_F";
-			atlOffset=0.039999008;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectTextureCustom0";
-					expression="_this setObjectTextureGlobal [0,_value]";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="#(argb,8,8,3)color(0,0,0,0,ca)";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rid_eden_objectID";
-					expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=2858;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item81
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={20558.303,20.083572,10518.727};
-				angles[]={0,1.4618703,0};
-			};
-			side="Empty";
-			flags=1;
-			class Attributes
-			{
-				name="tp_14";
-				disableSimulation=1;
-			};
-			id=2859;
-			type="VR_Area_01_square_1x1_yellow_F";
-			atlOffset=0.040000916;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectTextureCustom0";
-					expression="_this setObjectTextureGlobal [0,_value]";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="#(argb,8,8,3)color(0,0,0,0,ca)";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rid_eden_objectID";
-					expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=2859;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item82
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={21089.227,4.1867356,19904.002};
-				angles[]={0,5.8180199,0};
-			};
-			side="Empty";
-			flags=1;
-			class Attributes
-			{
-				name="tp_15";
-				disableSimulation=1;
-			};
-			id=2860;
-			type="VR_Area_01_square_1x1_yellow_F";
-			atlOffset=0.040000439;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectTextureCustom0";
-					expression="_this setObjectTextureGlobal [0,_value]";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="#(argb,8,8,3)color(0,0,0,0,ca)";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rid_eden_objectID";
-					expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=2860;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item83
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={16007.831,14.434055,16908.643};
-				angles[]={0,0.38810885,0};
-			};
-			side="Empty";
-			flags=1;
-			class Attributes
-			{
-				name="tp_classroom";
-				disableSimulation=1;
-			};
-			id=2863;
-			type="VR_Area_01_square_1x1_yellow_F";
-			atlOffset=0.0023193359;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectTextureCustom0";
-					expression="_this setObjectTextureGlobal [0,_value]";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="#(argb,8,8,3)color(0,0,0,0,ca)";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rid_eden_objectID";
-					expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=2863;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item84
-		{
 			dataType="Marker";
 			position[]={10307.737,105.787,9282.2988};
 			name="marker_35";
@@ -117997,7 +116753,7 @@ class Mission
 			id=2868;
 			atlOffset=62.408203;
 		};
-		class Item85
+		class Item68
 		{
 			dataType="Marker";
 			position[]={10307.735,105.78931,9282.2998};
@@ -118030,7 +116786,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item86
+		class Item69
 		{
 			dataType="Marker";
 			position[]={10307.73,43.374855,9282.3721};
@@ -118040,13 +116796,13 @@ class Mission
 			colorName="ColorRed";
 			id=2870;
 		};
-		class Item87
+		class Item70
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
 				position[]={16284.853,12.234025,16916.275};
-				angles[]={6.2485328,0,0.0013372133};
+				angles[]={6.2485409,0,0.0013439035};
 			};
 			id=2871;
 			type="ModuleCurator_F";
@@ -118120,7 +116876,7 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item88
+		class Item71
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -118200,7 +116956,7 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item89
+		class Item72
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -118293,7 +117049,7 @@ class Mission
 				nAttributes=6;
 			};
 		};
-		class Item90
+		class Item73
 		{
 			dataType="Layer";
 			name="Start";
@@ -118411,7 +117167,7 @@ class Mission
 			id=3031;
 			atlOffset=-0.73218918;
 		};
-		class Item91
+		class Item74
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -118517,13 +117273,14 @@ class Mission
 				nAttributes=7;
 			};
 		};
-		class Item92
+		class Item75
 		{
 			dataType="Layer";
 			name="Medic Live Fire";
+			state=1;
 			class Entities
 			{
-				items=17;
+				items=27;
 				class Item0
 				{
 					dataType="Group";
@@ -118536,7 +117293,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={21789.59,21.207447,7588.4067};
+								position[]={21789.789,21.154182,7588.2456};
 								angles[]={0,3.6118193,0};
 							};
 							side="Independent";
@@ -118544,7 +117301,7 @@ class Mission
 							class Attributes
 							{
 								rank="SERGEANT";
-								init="this disableAI ""PATH"";" \n "this setunitPOS ""UP"";" \n "_this addEventHandler [""Reloaded"",{  " \n "  _unit = _this select 0 ;  " \n "  _mag = _this select 4 select 0 ;  " \n "  _unit addMagazine _mag ;  " \n " }] ;";
+								init="this disableAI ""PATH"";" \n "this setunitPOS ""UP"";" \n "this addEventHandler [""Fired"", { " \n "    params [""_unit"", """", ""_muzzle"", """", """", ""_magazine""]; " \n "    if (!local  _unit) exitWith {}; " \n " " \n "    private _ammo = _unit ammo _muzzle; " \n " " \n "    if (_ammo == 0) then { " \n "        _unit addMagazine _magazine; " \n "    }; " \n "}];";
 								ignoreByDynSimulGrid=1;
 								stance="Up";
 								class Inventory
@@ -118747,7 +117504,6 @@ class Mission
 							};
 							id=3076;
 							type="UK3CB_AAF_I_RIF_1";
-							atlOffset=0.053264618;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -118895,7 +117651,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								init="this disableAI ""PATH"";" \n "this setunitPOS ""MIDDLE"";" \n "_this addEventHandler [""Reloaded"",{  " \n "  _unit = _this select 0 ;  " \n "  _mag = _this select 4 select 0 ;  " \n "  _unit addMagazine _mag ;  " \n " }] ;";
+								init="this disableAI ""PATH"";" \n "this setunitPOS ""MIDDLE"";" \n "this addEventHandler [""Fired"", { " \n "    params [""_unit"", """", ""_muzzle"", """", """", ""_magazine""]; " \n "    if (!local  _unit) exitWith {}; " \n " " \n "    private _ammo = _unit ammo _muzzle; " \n " " \n "    if (_ammo == 0) then { " \n "        _unit addMagazine _magazine; " \n "    }; " \n "}];";
 								ignoreByDynSimulGrid=1;
 								stance="Middle";
 								class Inventory
@@ -119245,7 +118001,7 @@ class Mission
 							side="Independent";
 							class Attributes
 							{
-								init="this disableAI ""PATH"";" \n "this setunitPOS ""MIDDLE"";" \n "_this addEventHandler [""Reloaded"",{  " \n "  _unit = _this select 0 ;  " \n "  _mag = _this select 4 select 0 ;  " \n "  _unit addMagazine _mag ;  " \n " }] ;";
+								init="this disableAI ""PATH"";" \n "this setunitPOS ""MIDDLE"";" \n "this addEventHandler [""Fired"", { " \n "    params [""_unit"", """", ""_muzzle"", """", """", ""_magazine""]; " \n "    if (!local  _unit) exitWith {}; " \n " " \n "    private _ammo = _unit ammo _muzzle; " \n " " \n "    if (_ammo == 0) then { " \n "        _unit addMagazine _magazine; " \n "    }; " \n "}];";
 								ignoreByDynSimulGrid=1;
 								stance="Middle";
 								class Inventory
@@ -119510,7 +118266,7 @@ class Mission
 						dynamicSimulation=1;
 					};
 					id=3075;
-					atlOffset=0.053264618;
+					atlOffset=185.97;
 				};
 				class Item1
 				{
@@ -119531,7 +118287,7 @@ class Mission
 							flags=7;
 							class Attributes
 							{
-								init="this disableAI ""PATH"";" \n "this setunitPOS ""MIDDLE"";" \n "_this addEventHandler [""Reloaded"",{  " \n "  _unit = _this select 0 ;  " \n "  _mag = _this select 4 select 0 ;  " \n "  _unit addMagazine _mag ;  " \n " }] ;";
+								init="this disableAI ""PATH"";" \n "this setunitPOS ""MIDDLE"";" \n "this addEventHandler [""Fired"", { " \n "    params [""_unit"", """", ""_muzzle"", """", """", ""_magazine""]; " \n "    if (!local  _unit) exitWith {}; " \n " " \n "    private _ammo = _unit ammo _muzzle; " \n " " \n "    if (_ammo == 0) then { " \n "        _unit addMagazine _magazine; " \n "    }; " \n "}];";
 								ignoreByDynSimulGrid=1;
 								stance="Middle";
 								class Inventory
@@ -119710,7 +118466,7 @@ class Mission
 							flags=1;
 							class Attributes
 							{
-								init="this disableAI ""PATH"";" \n "this setunitPOS ""MIDDLE"";" \n "_this addEventHandler [""Reloaded"",{  " \n "  _unit = _this select 0 ;  " \n "  _mag = _this select 4 select 0 ;  " \n "  _unit addMagazine _mag ;  " \n " }] ;";
+								init="this disableAI ""PATH"";" \n "this setunitPOS ""MIDDLE"";" \n "this addEventHandler [""Fired"", { " \n "    params [""_unit"", """", ""_muzzle"", """", """", ""_magazine""]; " \n "    if (!local  _unit) exitWith {}; " \n " " \n "    private _ammo = _unit ammo _muzzle; " \n " " \n "    if (_ammo == 0) then { " \n "        _unit addMagazine _magazine; " \n "    }; " \n "}];";
 								ignoreByDynSimulGrid=1;
 								stance="Middle";
 								class Inventory
@@ -119798,14 +118554,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="face";
+									expression="_this setface _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=0;
+											singleType="STRING";
+											value="";
 										};
 									};
 								};
@@ -119850,14 +118606,14 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="face";
-									expression="_this setface _value;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="";
+											singleType="BOOL";
+											value=0;
 										};
 									};
 								};
@@ -119869,20 +118625,20 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={21731.297,19.608446,7513.8135};
-								angles[]={6.2830677,0.66037071,6.2825055};
+								position[]={21731.297,19.608444,7513.814};
+								angles[]={6.2830634,0.66036272,6.2825046};
 							};
 							side="West";
 							class Attributes
 							{
 								rank="SERGEANT";
-								init="this disableAI ""PATH"";" \n "this setunitPOS ""UP"";" \n "_this addEventHandler [""Reloaded"",{  " \n "  _unit = _this select 0 ;  " \n "  _mag = _this select 4 select 0 ;  " \n "  _unit addMagazine _mag ;  " \n " }] ;";
+								init="this disableAI ""PATH"";" \n "this setunitPOS ""UP"";" \n "this addEventHandler [""Fired"", { " \n "    params [""_unit"", """", ""_muzzle"", """", """", ""_magazine""]; " \n "    if (!local  _unit) exitWith {}; " \n " " \n "    private _ammo = _unit ammo _muzzle; " \n " " \n "    if (_ammo == 0) then { " \n "        _unit addMagazine _magazine; " \n "    }; " \n "}];";
 								ignoreByDynSimulGrid=1;
 								stance="Up";
 							};
 							id=3081;
 							type="rhsusf_army_ocp_machinegunner";
-							atlOffset=3.3578663;
+							atlOffset=3.3578644;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -119985,7 +118741,7 @@ class Mission
 						dynamicSimulation=1;
 					};
 					id=3053;
-					atlOffset=0.0042362213;
+					atlOffset=185.97;
 				};
 				class Item2
 				{
@@ -120210,12 +118966,13 @@ class Mission
 					position[]={21723.996,16.357176,7514.6719};
 					class Attributes
 					{
-						condition="this && liveFireMedical == false;";
-						onActivation="execVM ""scripts\medical\livefirePatients.sqf"";" \n "liveFireMedical = true;";
+						condition="count (allPlayers select {alive _x && _x inArea thisTrigger}) > 0";
+						onActivation="liveFireMedical = true" \n "" \n "";
 						sizeA=20.99;
 						sizeB=20.99;
+						sizeC=10;
 						repeatable=1;
-						activationBy="ANYPLAYER";
+						activationBy="ANY";
 					};
 					id=3079;
 					type="EmptyDetectorAreaR50";
@@ -120394,7 +119151,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={21732.436,16.248356,7511.2148};
-						angles[]={-0,0,6.282495};
+						angles[]={0,0,6.282495};
 					};
 					side="Empty";
 					flags=4;
@@ -120579,6 +119336,7 @@ class Mission
 						onActivation="liveFireMedical = false;" \n "{deleteVehicle _x} foreach (nearestObjects [liveFire_Patient_1, [""rhsusf_army_ocp_rifleman_82nd""], 50]);";
 						sizeA=20.99;
 						sizeB=20.99;
+						sizeC=10;
 						repeatable=1;
 						activationBy="ANY";
 					};
@@ -120646,57 +119404,2007 @@ class Mission
 						nAttributes=3;
 					};
 				};
+				class Item17
+				{
+					dataType="Trigger";
+					position[]={21756.719,14.96567,7553.9722};
+					angle=0.70504308;
+					class Attributes
+					{
+						condition="true";
+						onActivation="_grenades = []; " \n "{ " \n "    _grenades append getArray(configFile >> ""CfgWeapons"" >> ""Throw"" >> _x >> ""magazines""); " \n "} forEach getArray(configFile >> ""CfgWeapons"" >> ""Throw"" >> ""muzzles""); " \n " " \n "{ " \n "    if!(isPlayer _x) then { " \n "        private _veh = _x; " \n "        {_veh removeMagazines _x} forEach _grenades; " \n "    }; " \n "} forEach thislist";
+						sizeA=33.790253;
+						sizeB=76.603348;
+						sizeC=10;
+						repeatable=1;
+						activationBy="ANY";
+						isRectangle=1;
+					};
+					id=3125;
+					type="EmptyDetectorAreaR250";
+				};
+				class Item18
+				{
+					dataType="Trigger";
+					position[]={21709.926,15.748793,7508.4521};
+					class Attributes
+					{
+						condition="liveFireMedical == true;";
+						onActivation="execVM ""scripts\medical\livefirePatients.sqf"";" \n "";
+						sizeA=0;
+						sizeB=0;
+						repeatable=1;
+						activationBy="ANY";
+						isServerOnly=1;
+					};
+					id=3128;
+					type="EmptyDetector";
+				};
+				class Item19
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={21721.074,17.668497,7516.4741};
+						angles[]={0,2.1827083,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=3132;
+					type="Land_Shoot_House_Panels_F";
+					atlOffset=-0.10438633;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item20
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={21729.125,17.657888,7510.7876};
+						angles[]={0,2.1827083,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=3134;
+					type="Land_Shoot_House_Panels_F";
+					atlOffset=0.00026893616;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3134;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item21
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={21719.418,17.653242,7514.1704};
+						angles[]={0,2.1980534,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=3131;
+					type="Land_Shoot_House_Wall_Long_F";
+					atlOffset=-0.13770962;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item22
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={21727.484,17.661718,7508.46};
+						angles[]={0,2.1980534,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=3133;
+					type="Land_Shoot_House_Wall_Long_F";
+					atlOffset=0.0071296692;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3133;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item23
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={21727.035,16.252409,7508.8911};
+						angles[]={0.00055677077,5.344841,6.2827773};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=3135;
+					type="Land_InvisibleBarrier_F";
+					atlOffset=0.00032615662;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item24
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={21727.9,16.251675,7510.1084};
+						angles[]={0.00055677077,5.344841,6.2827773};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=3136;
+					type="Land_InvisibleBarrier_F";
+					atlOffset=0.00018882751;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3136;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item25
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={21718.93,16.357025,7514.5728};
+						angles[]={0,5.3355298,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=3137;
+					type="Land_InvisibleBarrier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item26
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={21719.801,16.357025,7515.7808};
+						angles[]={0,5.3355298,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=3138;
+					type="Land_InvisibleBarrier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3138;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
 			};
 			id=3077;
-			atlOffset=2.2429218;
+			atlOffset=0.18878937;
 		};
-		class Item93
+		class Item76
 		{
-			dataType="Object";
+			dataType="Layer";
+			name="Dorida Defense";
+			state=1;
+			class Entities
+			{
+				items=6;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={19388.975,42.329781,13259.3};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=3116;
+					type="nzf_NZFlag";
+					atlOffset=-3.8146973e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={19389.141,40.066727,13259.077};
+					};
+					side="Empty";
+					class Attributes
+					{
+						init="action_1 = [""classroom"",""Escape to the Classroom"","""",{[tp_classroom]execVM ""scripts\medical\teleport.sqf"";},{true}] call ace_interact_menu_fnc_createAction;       " \n "[this, 0, [""ACE_MainActions""], action_1] call ace_interact_menu_fnc_addActionToObject;  ";
+					};
+					id=3120;
+					type="Sign_Sphere10cm_Geometry_F";
+					atlOffset=1.7029991;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0,ca)";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={19394.17,38.50761,13261.93};
+						angles[]={0,4.1819978,0};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						name="tp_16";
+						disableSimulation=1;
+					};
+					id=3119;
+					type="VR_Area_01_square_1x1_yellow_F";
+					atlOffset=0.040786743;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0,ca)";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3119;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item3
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={19377.125,38.227303,13254.944};
+						angles[]={0.014664836,0,0.0093286335};
+					};
+					init="call{{_x allowdammage false;} foreach ((getpos this) nearObjects [""House"", 250]);}";
+					id=3113;
+					type="Logic";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3113;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item4
+				{
+					dataType="Marker";
+					position[]={19397.803,38.668381,13256.65};
+					name="BAS_zone_1";
+					markerType="ELLIPSE";
+					type="";
+					a=200;
+					b=200;
+					id=3117;
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={19387.131,39.323963,13260.033};
+						angles[]={0,4.1156988,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						name="doridaBoard";
+						disableSimulation=1;
+					};
+					id=3121;
+					type="SignAd_Sponsor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			id=3114;
+			atlOffset=0.069892883;
+		};
+		class Item77
+		{
+			dataType="Layer";
+			name="Teleports";
+			state=1;
+			class Entities
+			{
+				items=18;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={20900.289,10.837553,19213.508};
+						angles[]={0,5.8306737,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						name="tp_0";
+						disableSimulation=1;
+					};
+					id=2832;
+					type="VR_Area_01_square_1x1_yellow_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0,ca)";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2832;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15091.762,17.887739,17269.191};
+						angles[]={0.0039967569,5.5202146,0.0039967569};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						name="tp_1";
+						disableSimulation=1;
+					};
+					id=2834;
+					type="VR_Area_01_square_1x1_yellow_F";
+					atlOffset=0.036962509;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0,ca)";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2834;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15501.397,16.678883,14945.372};
+						angles[]={0,6.2799563,0};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						name="tp_10";
+						disableSimulation=1;
+					};
+					id=2855;
+					type="VR_Area_01_square_1x1_yellow_F";
+					atlOffset=0.040393829;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0,ca)";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2855;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4235.71,72.130432,15808.603};
+						angles[]={0,2.0108986,0};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						name="tp_11";
+						disableSimulation=1;
+					};
+					id=2856;
+					type="VR_Area_01_square_1x1_yellow_F";
+					atlOffset=0.041007996;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0,ca)";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2856;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11598.296,23.641897,11980.655};
+						angles[]={0,5.2431259,0};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						name="tp_12";
+						disableSimulation=1;
+					};
+					id=2857;
+					type="VR_Area_01_square_1x1_yellow_F";
+					atlOffset=0.040000916;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0,ca)";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2857;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={24874.365,20.66461,20840.061};
+						angles[]={0,5.9280806,0};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						name="tp_13";
+						disableSimulation=1;
+					};
+					id=2858;
+					type="VR_Area_01_square_1x1_yellow_F";
+					atlOffset=0.039999008;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0,ca)";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2858;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={20558.303,20.083572,10518.727};
+						angles[]={0,1.4618703,0};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						name="tp_14";
+						disableSimulation=1;
+					};
+					id=2859;
+					type="VR_Area_01_square_1x1_yellow_F";
+					atlOffset=0.040000916;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0,ca)";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2859;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={21089.227,4.1867356,19904.002};
+						angles[]={0,5.8180199,0};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						name="tp_15";
+						disableSimulation=1;
+					};
+					id=2860;
+					type="VR_Area_01_square_1x1_yellow_F";
+					atlOffset=0.040000439;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0,ca)";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2860;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={23050.158,3.1905,17205.75};
+						angles[]={0,2.3000996,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						name="tp_2";
+						disableSimulation=1;
+					};
+					id=2835;
+					type="VR_Area_01_square_1x1_yellow_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0,ca)";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2835;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item9
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={22610.234,3.1874797,18235.268};
+						angles[]={0,0.81081015,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						name="tp_3";
+						disableSimulation=1;
+					};
+					id=2836;
+					type="VR_Area_01_square_1x1_yellow_F";
+					atlOffset=-2.3841858e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0,ca)";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2836;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item10
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14759.64,17.9105,16702.758};
+						angles[]={0,3.9345829,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						name="tp_4";
+						disableSimulation=1;
+					};
+					id=2837;
+					type="VR_Area_01_square_1x1_yellow_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0,ca)";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2837;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item11
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={16361.401,2.3955677,12466.578};
+						angles[]={0,4.7866178,0};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						name="tp_5";
+						disableSimulation=1;
+					};
+					id=2838;
+					type="VR_Area_01_square_1x1_yellow_F";
+					atlOffset=0.085141182;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0,ca)";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2838;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item12
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13196.633,19.914925,13484.473};
+						angles[]={0,3.8179951,0};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						name="tp_6";
+						disableSimulation=1;
+					};
+					id=2839;
+					type="VR_Area_01_square_1x1_yellow_F";
+					atlOffset=0.049684525;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0,ca)";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2839;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item13
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11210.637,182.41051,8712.0068};
+						angles[]={0,5.4065762,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						name="tp_7";
+						disableSimulation=1;
+					};
+					id=2840;
+					type="VR_Area_01_square_1x1_yellow_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0,ca)";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2840;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item14
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14298.014,19.327454,16286.795};
+						angles[]={0,6.0771837,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						name="tp_8";
+						disableSimulation=1;
+					};
+					id=2841;
+					type="VR_Area_01_square_1x1_yellow_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0,ca)";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2841;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item15
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={20112.91,23.61784,22804.736};
+						angles[]={0,3.5881701,0};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						name="tp_9";
+						disableSimulation=1;
+					};
+					id=2849;
+					type="VR_Area_01_square_1x1_yellow_F";
+					atlOffset=0.040756226;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0,ca)";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2849;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item16
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={16007.831,14.434055,16908.643};
+						angles[]={0,0.38810885,0};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						name="tp_classroom";
+						disableSimulation=1;
+					};
+					id=2863;
+					type="VR_Area_01_square_1x1_yellow_F";
+					atlOffset=0.0023193359;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0,ca)";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2863;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item17
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={21713.271,15.198719,7501.6479};
+						angles[]={0,0.56000632,0};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						name="tp_liveFire";
+						disableSimulation=1;
+					};
+					id=3091;
+					type="VR_Area_01_square_1x1_yellow_F";
+					atlOffset=0.0018548965;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0,ca)";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="rid_eden_objectID";
+							expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3091;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+			};
+			id=3122;
+			atlOffset=-46.387909;
+		};
+		class Item78
+		{
+			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={21713.271,15.198719,7501.6479};
-				angles[]={0,0.56000632,0};
+				position[]={16232.911,14.099282,16889.82};
 			};
-			side="Empty";
-			flags=1;
-			class Attributes
-			{
-				name="tp_liveFire";
-				disableSimulation=1;
-			};
-			id=3091;
-			type="VR_Area_01_square_1x1_yellow_F";
-			atlOffset=0.0018548965;
+			id=3127;
+			type="ModuleTimeMultiplier_F";
 			class CustomAttributes
 			{
 				class Attribute0
 				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
+					property="ModuleTimeMultiplier_F_TimeMultiplier";
+					expression="_this setVariable ['TimeMultiplier',_value,true];";
 					class Value
 					{
 						class data
 						{
-							singleType="BOOL";
+							singleType="SCALAR";
 							value=0;
 						};
 					};
 				};
-				class Attribute1
-				{
-					property="ObjectTextureCustom0";
-					expression="_this setObjectTextureGlobal [0,_value]";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="#(argb,8,8,3)color(0,0,0,0,ca)";
-						};
-					};
-				};
-				class Attribute2
+				nAttributes=1;
+			};
+		};
+		class Item79
+		{
+			dataType="Marker";
+			position[]={19396.332,38.473274,13262.352};
+			name="marker_38";
+			text="Town Defense";
+			type="b_installation";
+			colorName="ColorCIV";
+			a=1.5;
+			b=1.5;
+			id=3118;
+			class CustomAttributes
+			{
+				class Attribute0
 				{
 					property="rid_eden_objectID";
 					expression="if (is3DEN || {_value < 0}) exitWith {}; [_this, _value] call rid_eden_fnc_registerObjectID";
@@ -120705,24 +121413,11 @@ class Mission
 						class data
 						{
 							singleType="SCALAR";
-							value=3091;
+							value=3118;
 						};
 					};
 				};
-				class Attribute3
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=4;
+				nAttributes=1;
 			};
 		};
 	};
@@ -120730,11 +121425,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=121;
+			nextID=122;
 		};
 		class Links
 		{
-			items=121;
+			items=122;
 			class Item0
 			{
 				linkID=0;
@@ -121940,6 +122635,16 @@ class Mission
 				linkID=120;
 				item0=3008;
 				item1=3007;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item121
+			{
+				linkID=121;
+				item0=3124;
+				item1=1606;
 				class CustomData
 				{
 					type="Sync";
