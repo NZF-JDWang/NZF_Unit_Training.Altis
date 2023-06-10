@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2431;
+		nextID=2470;
 	};
 	class Camera
 	{
-		pos[]={21701.029,73.32814,7459.4346};
-		dir[]={0.43983263,-0.57162082,0.69270682};
-		up[]={0.30640414,0.82051355,0.4825663};
-		aside[]={0.84422588,-6.7648944e-007,-0.53603804};
+		pos[]={11119.913,238.11673,8629.29};
+		dir[]={0.68060082,-0.42845643,0.59432226};
+		up[]={0.32272935,0.90356255,0.28181744};
+		aside[]={0.65775311,1.7535058e-007,-0.75324059};
 	};
 };
 binarizationWanted=0;
@@ -99031,7 +99031,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="this setfuel 0; this setVehicleLock ""LOCKED"";";
+									value="(_this select 0) setfuel 0; (_this select 0) setVehicleLock ""LOCKED"";";
 								};
 							};
 						};
@@ -105441,7 +105441,7 @@ class Mission
 					};
 					id=3244;
 					type="nzf_diveKit";
-					atlOffset=0.022898674;
+					atlOffset=0.022898912;
 				};
 			};
 			id=2345;
@@ -118361,14 +118361,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="face";
-									expression="_this setface _value;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="";
+											singleType="BOOL";
+											value=0;
 										};
 									};
 								};
@@ -118413,14 +118413,14 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="face";
+									expression="_this setface _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=0;
+											singleType="STRING";
+											value="";
 										};
 									};
 								};

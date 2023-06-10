@@ -133,9 +133,7 @@ _mcVestsMachinegun = [
 	"Crye_AVS_MC_LMG_1_NC_NoBelt",
 	"Crye_AVS_MC_LMG_1_NC",
 	"Crye_JPC_LMG_MC_1_NoBelt",
-	"Crye_JPC_LMG_MC_1",
-	"USP_CRYE_JPC_MGB",
-	"USP_CRYE_JPC_MG"
+	"Crye_JPC_LMG_MC_1"
 ];
 
 _mcOperatorVests = [
@@ -154,10 +152,7 @@ _mcOperatorVests = [
 	"Crye_JPC_MC_7_NoBelt",
 	"Crye_JPC_MC_7",
 	"Crye_JPC_MC_10_NoBelt",
-	"Crye_JPC_MC_10",
-	"USP_VEST_STRANDHOGG2_MC",
-	"USP_VEST_PLATEFRAME_LOAD_MC",
-	"USP_VEST_PLATEFRAME_LOAD2_MC"
+	"Crye_JPC_MC_10"
 ];
 //***************************************************************
 _mcSmallBackpacks = [
@@ -1160,8 +1155,6 @@ _railAttachments = [
 	"Tier1_SOCOM762_2_Black",
 	"Tier1_SOCOM762_2_Mini_DE",
 	"Tier1_SOCOM762_2_Mini_Black",
-	"Tier1_SOCOM762MG_DE",
-	"Tier1_SOCOM762MG_Black",
 	"Tier1_KAC_762_QDC_Tan",
 	"Tier1_KAC_762_QDC_Black",
 	"Tier1_KAC_762_DSR",
@@ -1240,7 +1233,7 @@ switch (_role) do {
 	};
 
 	case "Leader": {
-		[player, _beret + _multicamUniforms + _mcVestsLeader + _mcRadiopacks + _mcHeadgear + _CBHeadgear + _ODHeadgear + _caps + _facewear + _NVGS + _ammo + _basicMedical + _pistols + _rifles + _optics + _railattachments + _launchers + [
+		[player, _beret + _multicamUniforms + _mcVestsLeader + _mcRadiopacks + _mcSmallBackpacks + _mcBigBackpacks + _mcHeadgear + _CBHeadgear + _ODHeadgear + _caps + _facewear + _NVGS + _ammo + _basicMedical + _pistols + _rifles + _optics + _railattachments + _launchers + [
 				"ACRE_PRC152",
 				"ItemcTab",
 				"ACE_MX2A",
