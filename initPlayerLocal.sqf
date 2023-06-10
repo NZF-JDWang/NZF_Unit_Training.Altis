@@ -1,6 +1,6 @@
 //Initialize player groups (U - menu) 
 ["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups; 
-[] execVM "scripts\QS_icons.sqf";
+
 //ACE Spectator
 [allPlayers, [player]] call ace_spectator_fnc_updateUnits;
 [[1,2], [0]] call ace_spectator_fnc_updateCameraModes;

@@ -7,7 +7,13 @@ sofia = false;
 chalkeia = false;
 negades = false;
 hotel = false;
+
 liveFireMedical = false;
+
+HOTLZ = false;
+
+heloMarkers = ["marker_3", "marker_4", "marker_5", "marker_6", "marker_7", "marker_8", "marker_9", "marker_10", "marker_11"];
+{_x setMarkerColor "ColorBlue"} foreach heloMarkers;
 
 [] execVM "eos\OpenMe.sqf";
 
