@@ -7,7 +7,7 @@
 [[-2,-1], [0,1,2,3,4,5,6,7]] call ace_spectator_fnc_updateVisionModes;
 
 //Load arsenals
-arsenal_1 execVM "scripts\arsenal.sqf"; 
+arsenal_1 execVM "arsenal\arsenal.sqf"; 
 
 _actionMenu = ["menu","Training Menu","",{execVM "scripts\trainingMenu.sqf"},{!(player inArea "BAS_zone_1")}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions"], _actionMenu] call ace_interact_menu_fnc_addActionToObject;
@@ -22,8 +22,6 @@ if (squadParams player select 0 select 0 == "NZF") then {player addHeadgear "nzf
 
 //Make players less visible to the AI and add the blood patch 
 
-player spawn NZF_fnc_bloodpatch;
-
 // Setup INCON Undercover 
 if (player getVariable ["isSneaky",false]) then {
     [player] execVM "INC_undercover\Scripts\initUCR.sqf";
@@ -36,7 +34,7 @@ params ["_unit"];
 
 _unit addEventHandler ["Killed", {
     params ["_unit"];
-    Mission_loadout = getUnitLoadout _unit;
+    Mission_loadout = [getUnitLoadout _unit] call acre_api_fnc_filterUnitLoadout;
 }];
 
 _unit addEventHandler ["Respawn", {

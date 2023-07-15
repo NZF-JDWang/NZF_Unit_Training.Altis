@@ -1,18 +1,4 @@
-params ["_box", ["_playerRole", "Operator"]];
-private _role = "Training";
-/*
-[_box, false, [0, 0, 0], 0] call ace_dragging_fnc_setDraggable;   
-[_box, false, [0, 0, 0], 0] call ace_dragging_fnc_setCarryable;   
-clearMagazineCargo _box;
-clearWeaponCargo _box;
-clearItemCargoGlobal _box;
-clearBackpackCargo _box;
-_box allowDamage false;
-*/
-//GEAR ARRAYS 
-//*******************************************************************************
-_multicamUniforms = [	
-	//MC G3 Uniforms
+_uniforms = [
 	"USP_G3C_CU_KP_MC",
 	"USP_G3C_CU_KP_MX_MC",
 	"USP_G3C_CS_CU_KP_MC",
@@ -21,18 +7,15 @@ _multicamUniforms = [
 	"USP_G3C_RS_CU_KP_MX_MC",
 	"USP_G3C_RS2_CU_KP_MC",
 	"USP_G3C_RS2_CU_KP_MX_MC",
-	//MC Overwhites
 	"USP_OVERWHITE_G3C_KP2_BLK_MC",
 	"USP_OVERWHITE_G3C_KP2_GRN_MC",
 	"USP_OVERWHITE_G3C_KP2_TAN_MC",
-	//MC PCU
 	"USP_PCU_G3C_KP_MC",
 	"USP_PCU_G3C_KP_MX_MC",
 	"USP_PCU_G3C_KP_BLK_MC",
 	"USP_PCU_G3C_KP_MX_BLK_MC",
 	"USP_PCU_G3C_KP_GRY_MC",
 	"USP_PCU_G3C_KP_MX_GRY_MC",
-	//MC SoftShell
 	"USP_SOFTSHELL_G3C_KP_MC",
 	"USP_SOFTSHELL_G3C_KP_MX_MC",
 	"USP_SOFTSHELL_G3C_KP_RGR_MC",
@@ -43,7 +26,6 @@ _multicamUniforms = [
 	"USP_SOFTSHELL_G3C_KP_MX_CBR_MC",
 	"USP_SOFTSHELL_G3C_KP_GRY_MC",
 	"USP_SOFTSHELL_G3C_KP_MX_MC",
-	//MC Untucked T-shirt
 	"USP_TSHIRT_G3C_KP_BLK_MC",
 	"USP_TSHIRT_G3C_KP_CBR_MC",
 	"USP_TSHIRT_G3C_KP_GRN_MC",
@@ -59,7 +41,6 @@ _multicamUniforms = [
 	"USP_TSHIRT_G3C_KP_OR_GRN_MC",
 	"USP_TSHIRT_G3C_KP_OR_GRY_MC",
 	"USP_TSHIRT_G3C_KP_OR_NAV_MC",
-	//Rugby Top 
 	"USP_RUGBY_G3C_KP_BLK_MC",
 	"USP_RUGBY_G3C_KP_CBR_MC",
 	"USP_RUGBY_G3C_KP_GRY_MC",
@@ -72,7 +53,6 @@ _multicamUniforms = [
 	"USP_RUGBY_G3C_KP_OR_CBR_MC",
 	"USP_RUGBY_G3C_KP_OR_GRY_MC",
 	"USP_RUGBY_G3C_KP_OR_RGR_MC",
-	//MC Tucked T-shirt
 	"USP_TSHIRT2_G3C_KP_BLK_MC",
 	"USP_TSHIRT2_G3C_KP_CBR_MC",
 	"USP_TSHIRT2_G3C_KP_GRN_MC",
@@ -89,10 +69,82 @@ _multicamUniforms = [
 	"USP_TSHIRT2_G3C_KP_MX_GRY_MC",
 	"USP_TSHIRT2_G3C_KP_MX_NAV_MC"
 ];
-
-
-//***************************************************************
-_mcVestsLeader = [
+_uniformsHelicopter = [
+	"USP_G3C_CU_KP_GRY",
+	"USP_G3C_CU_KP_KHK",
+	"USP_G3C_CU_KP_RGR"
+];
+_uniformsFixedWing = [
+	"CSU13BPTan_Base_NG",
+	"CSU13BP_Base_NG",
+	"CSU15BPTan_Base_FG",
+	"CSU15BP_Base_FG"
+];
+_uniformsLowVis = [
+	"flb_511TacPants_ButtonUp_TanBlk_uniform",
+	"flb_511TacPants_ButtonUp_TanBlue_uniform",
+	"flb_511TacPants_ButtonUp_TanGreen_uniform",
+	"flb_511TacPants_ButtonUp_TanRed_uniform",
+	"flb_511TacPants_ButtonUp_TanWht_uniform",
+	"flb_511TacPants_ButtonUp_TanYellow_uniform",
+	"flb_511TacPants_ButtonUp_Rolled_TanBlk_uniform",
+	"flb_511TacPants_ButtonUp_Rolled_TanBlue_uniform",
+	"flb_511TacPants_ButtonUp_Rolled_TanGreen_uniform",
+	"flb_511TacPants_ButtonUp_Rolled_TanRed_uniform",
+	"flb_511TacPants_ButtonUp_Rolled_TanWht_uniform",
+	"flb_511TacPants_ButtonUp_Rolled_TanYellow_uniform",
+	"ButtonUp_Cargo_BLK_V1_uniform",
+	"ButtonUp_Cargo_BLK_BLUE_uniform",
+	"ButtonUp_Cargo_BLK_RED_uniform",
+	"ButtonUp_Cargo_BLK_WHITE_uniform",
+	"ButtonUp_Cargo_KHK_BLK_uniform",
+	"ButtonUp_Cargo_KHK_BLUE_uniform",
+	"ButtonUp_Cargo_KHK_RED_uniform",
+	"ButtonUp_Cargo_KHK_WHITE_uniform",
+	"ButtonUp_Cargo_OD_BLK_uniform",
+	"ButtonUp_Cargo_OD_BLUE_uniform",
+	"ButtonUp_Cargo_OD_RED_uniform",
+	"ButtonUp_Cargo_OD_WHITE_uniform",
+	"flb_Jeans_Hoodie_Blk_uniform",
+	"flb_Jeans_Hoodie_Blue_uniform",
+	"flb_Jeans_Hoodie_BoogBoy_uniform",
+	"flb_Jeans_Hoodie_FYF_uniform",
+	"flb_Jeans_Hoodie_Rgr_uniform",
+	"flb_Shorts_Hoodie_BlkBlk_uniform",
+	"flb_Shorts_Hoodie_BlkBlue_uniform",
+	"flb_Shorts_Hoodie_BlkBoogBoy_uniform",
+	"flb_Shorts_Hoodie_BlkFYF_uniform",
+	"flb_Shorts_Hoodie_BlkRgr_uniform",
+	"flb_Shorts_Hoodie_BlkGrey_uniform",
+	"flb_Shorts_Hoodie_BlkGTAC_uniform",
+	"flb_Shorts_Hoodie_BlkRed_uniform",
+	"flb_Shorts_Hoodie_MCMBlk_uniform",
+	"flb_Shorts_Hoodie_MCMRgr_uniform",
+	"flb_Shorts_Hoodie_MCMGTAC_uniform",
+	"flb_Shorts_Hoodie_MCMRunUP1_uniform",
+	"flb_Shorts_Hoodie_MCMSPL_uniform",
+	"gxts_urb_gry_tshirt_blk_uni",
+	"gxts_urb_gry_tshirt_blk_g_uni",
+	"gxts_urb_gry_tshirt_blue_uni",
+	"gxts_urb_gry_tshirt_blue_g_uni",
+	"gxts_urb_gry_tshirt_brown_uni",
+	"gxts_urb_gry_tshirt_brown_g_uni",
+	"gxts_urb_gry_tshirt_gray_uni",
+	"gxts_urb_gry_tshirt_gray_g_uni",
+	"gxts_urb_gry_tshirt_white_uni",
+	"gxts_urb_gry_tshirt_white_g_uni",
+	"gxts_urb_gry_tshirt_blk_sleeve_uni",
+	"gxts_urb_gry_tshirt_blk_sleeve_g_uni",
+	"gxts_urb_gry_tshirt_blue_sleeve_uni",
+	"gxts_urb_gry_tshirt_blue_sleeve_g_uni",
+	"gxts_urb_gry_tshirt_brown_sleeve_uni",
+	"gxts_urb_gry_tshirt_brown_sleeve_g_uni",
+	"gxts_urb_gry_tshirt_gray_sleeve_uni",
+	"gxts_urb_gry_tshirt_gray_sleeve_g_uni",
+	"gxts_urb_gry_tshirt_white_sleeve_uni",
+	"gxts_urb_gry_tshirt_white_sleeve_g_uni"
+];
+_vestsLeader = [
 	"Crye_AVS_MC_TeamLeader_1_NC_NoBelt",
 	"Crye_AVS_MC_TeamLeader_1_NC",
 	"Crye_AVS_MC_TeamLeader_4_NC_NoBelt",
@@ -106,8 +158,7 @@ _mcVestsLeader = [
 	"Crye_JPC_TeamLeader_MC_7_NoBelt",
 	"Crye_JPC_TeamLeader_MC_7"
 ];
-
-_mcVestsComms = [
+_vestsComms = [
 	"Crye_AVS_MC_Comms_1_NC_NoBelt",
 	"Crye_AVS_MC_Comms_1_NC",
 	"Crye_AVS_MC_Comms_4_NC_NoBelt",
@@ -121,22 +172,13 @@ _mcVestsComms = [
 	"Crye_JPC_Comms_MC_7_NoBelt",
 	"Crye_JPC_Comms_MC_7"
 ];
-
-_mcVestsMedic = [
+_vestsMedic = [
 	"Crye_AVS_MC_Medic_1_NC_NoBelt",
 	"Crye_AVS_MC_Medic_1_NC",
 	"Crye_JPC_Medic_MC_NoBelt",
 	"Crye_JPC_Medic_MC_1"
 ];
-
-_mcVestsMachinegun = [
-	"Crye_AVS_MC_LMG_1_NC_NoBelt",
-	"Crye_AVS_MC_LMG_1_NC",
-	"Crye_JPC_LMG_MC_1_NoBelt",
-	"Crye_JPC_LMG_MC_1"
-];
-
-_mcOperatorVests = [
+_vestsOperator = [
 	"Crye_AVS_MC_1_NC_NoBelt",
 	"Crye_AVS_MC_1_NC",
 	"Crye_AVS_MC_4_NC_NoBelt",
@@ -154,20 +196,45 @@ _mcOperatorVests = [
 	"Crye_JPC_MC_10_NoBelt",
 	"Crye_JPC_MC_10"
 ];
-//***************************************************************
-_mcSmallBackpacks = [
+_vestsMachineGunner = [
+	"Crye_AVS_MC_LMG_1_NC_NoBelt",
+	"Crye_AVS_MC_LMG_1_NC",
+	"Crye_JPC_LMG_MC_1_NoBelt",
+	"Crye_JPC_LMG_MC_1"
+];
+_vestsHelicopter = [
+	"Crye_AVS_BLK_Light_1_NC",
+	"Crye_AVS_BLK_Light_3_NC",
+	"Crye_AVS_CB_Light_1_NC",
+	"Crye_AVS_CB_Light_3_NC",
+	"Crye_AVS_MC_Light_1_NC",
+	"Crye_AVS_MC_Light_3_NC",
+	"Crye_AVS_RG_Light_1_NC",
+	"Crye_AVS_RG_Light_3_NC",
+	"Crye_JPC_Light_BLK_1",
+	"Crye_JPC_Light_BLK_3",
+	"Crye_JPC_Light_CB_1",
+	"Crye_JPC_Light_CB_3",
+	"Crye_JPC_Light_MC_1",
+	"Crye_JPC_Light_MC_3",
+	"Crye_JPC_Light_RG_1",
+	"Crye_JPC_Light_RG_3"
+];
+_vestsFixedWing = [
+	"SRU21P_LPU9P_PCU15AP",
+	"SRU21P_LPU9P_PCU15AP_Alt",
+	"SV2B_LPU23P",
+	"SV2B_LPU36P"
+];
+_backpacksSmall = [
 	"TFL_avs_pack_mc_flag",
 	"TFL_avs_pack_mc_bolt_flag",
+	"TFL_avs_pack_mc",
 	"TFL_avs_pack_bolt_mc",
 	"TFL_avs_pack_breacher_mc_flag",
 	"TFL_avs_pack_breacher_mc",
 	"TFL_avs_pack_mc_halligan_flag",
 	"TFL_avs_pack_mc_halligan",
-	"TFL_avs_pack_mc",
-	"TFL_Panel1_jpc_mc",
-	"TFL_Panel2_jpc_mc",
-	"TFL_Panel3_jpc_mc",
-	"TFL_Panel4_jpc_mc",
 	"TFL_jpc_pack_mc_flag",
 	"TFL_jpc_pack_mc_bolt_flag",
 	"TFL_jpc_pack_bolt_mc",
@@ -175,131 +242,148 @@ _mcSmallBackpacks = [
 	"TFL_jpc_pack_breacher_mc",
 	"TFL_jpc_pack_mc_halligan_flag",
 	"TFL_jpc_pack_mc_halligan",
-	"TFL_jpc_pack_mc",
-	"TFL_hydro_panel_jpc",
-	"TFL_lbx_panel_jpc",
-	"USP_ZIPON_PANEL_MC",
-	"USP_ZIPON_PANEL_MC_RF",
-	"USP_ZIPON_PANEL_MC_RF2",
-	"USP_PACK_BREACHER_MC",
-	"USP_PACK_FASTHAWK",
-	"USP_PACK_HYDRATION",
-	"USP_PACK_POINTMAN",
-	"B_rhsusf_B_BACKPACK"
+	"TFL_jpc_pack_mc"
 ];
-
-_mcBigBackpacks = [
-	"TFL_LBT_day_mc",
+_backpacksMedic = [
+	"TFL_M9Backpack_MC",
+	"LSM_FP_01Med_MC",
+	"RATS"
+];
+_backpacksLarge = [
 	"pmc_MysteryASAP_mc",
 	"pmc_MysteryCL_mc",
-	"USP_45L_RUCKSACK_MC"
+	"TFL_LBT_day_mc"
 ];
-
-_mcMedicBackpacks = [
-	"TFL_M9Backpack_MC"
-];
-
-_mcRadioPacks = [
-	"USP_TACTICAL_PACK_CCT",
-	"USP_TACTICAL_PACK_CCT2",
-	"USP_TACTICAL_PACK_CCT3",
-	"USP_TACTICAL_PACK_CCT4",
-	"USP_TACTICAL_PACK_CCT5",
-	"USP_TACTICAL_PACK_CCT6",
-	"USP_TACTICAL_PACK_CCT7",
-	"USP_TACTICAL_PACK_CCT8"
-];
-//***************************************************************
-_mcHeadgear = [
-	"USP_BASEBALL_CAP_D",
-	"USP_BASEBALL_CAP_CT3",
-	"USP_BASEBALL_CAPB_D",
-	"USP_BASEBALL_CAPB_CT3",
+_headgearLight = [
 	"USP_BASEBALL_CAP",
+	"USP_BASEBALL_CAP_OD",
+	"USP_BASEBALL_CAP_CBR",
+	"USP_BASEBALL_CAP_BLK",
+	"USP_BASEBALL_CAPB_BLK",
+	"USP_BASEBALL_CAPB_CBR",
 	"USP_BASEBALL_CAPB",
+	"USP_BASEBALL_CAPB_RGR",
+	"USP_BASEBALL_CAPB_CT3_BLK",
+	"USP_BASEBALL_CAPB_CT3_CBR",
+	"USP_BASEBALL_CAPB_CT3",
+	"USP_BASEBALL_CAPB_CT3_RGR",
+	"USP_BASEBALL_CAP_CT3_BLK",
+	"USP_BASEBALL_CAP_CT3_CBR",
+	"USP_BASEBALL_CAP_CT3",
+	"USP_BASEBALL_CAP_CT3_OD"
+];
+_headgearHeavy = [
+	"USP_OPSCORE_FASTMT_OD",
+	"USP_OPSCORE_FASTMT",
 	"USP_OPSCORE_FASTMTC",
 	"USP_OPSCORE_FASTMTC_C",
-	"USP_OPSCORE_FASTMTC_MW",
+	"USP_OPSCORE_FASTMT_OD_C",
+	"USP_OPSCORE_FASTMT_C",
 	"USP_OPSCORE_FASTMTC_G",
+	"USP_OPSCORE_FASTMT_OD_G",
+	"USP_OPSCORE_FASTMT_G",
+	"USP_OPSCORE_FASTMT_OD_CG",
+	"USP_OPSCORE_FASTMT_CG",
 	"USP_OPSCORE_FASTMTC_CG",
-	"USP_OPSCORE_FASTMTC_CMW",
-	"USP_OPSCORE_FASTMTC_CMG",
-	"USP_OPSCORE_FASTMTC_CG",
-	"USP_OPSCORE_FASTMTC_CGW",
-	"USP_OPSCORE_FASTMTC_W",
-	"USP_OPSCORE_FASTMTC_G",
-	"USP_OPSCORE_FASTMTC_GW"
-];
-//***************************************************************
-_CBHeadgear = [
-	"USP_BASEBALL_CAP_CBR_D",
-	"USP_BASEBALL_CAP_CT3_CBR",
-	"USP_BASEBALL_CAPB_CBR_D",
-	"USP_BASEBALL_CAPB_CT3_CBR",
-	"USP_BASEBALL_CAP_CBR",
-	"USP_BASEBALL_CAPB_CBR",
-	"USP_OPSCORE_FASTMT",
-	"USP_OPSCORE_FASTMT_MCA_C",
-	"USP_OPSCORE_FASTMT_MCA_MW",
-	"USP_OPSCORE_FASTMT_MCA_G",
-	"USP_OPSCORE_FASTMT_MCA_CG",
-	"USP_OPSCORE_FASTMT_MCA_CMW",
-	"USP_OPSCORE_FASTMT_MCA_CMG",
-	"USP_OPSCORE_FASTMT_MCA_CG",
-	"USP_OPSCORE_FASTMT_MCA_CGW",
-	"USP_OPSCORE_FASTMT_MCA_W",
-	"USP_OPSCORE_FASTMT_MCA_G",
-	"USP_OPSCORE_FASTMT_MCA_GW"
-];
-//***************************************************************
-_ODHeadgear = [
-	"USP_BASEBALL_CAP_OD_D",
-	"USP_BASEBALL_CAP_CT3_OD",
-	"USP_BASEBALL_CAPB_OD_D",
-	"USP_BASEBALL_CAPB_CT3_OD",
-	"USP_BASEBALL_CAP_OD",
-	"USP_BASEBALL_CAPB_OD",
-	"USP_OPSCORE_FASTMT_OD",
-	"USP_OPSCORE_FASTMT_OD_MCA_C",
-	"USP_OPSCORE_FASTMT_OD_MCA_MW",
-	"USP_OPSCORE_FASTMT_OD_MCA_G",
-	"USP_OPSCORE_FASTMT_OD_MCA_CG",
-	"USP_OPSCORE_FASTMT_OD_MCA_CMW",
-	"USP_OPSCORE_FASTMT_OD_MCA_CMG",
-	"USP_OPSCORE_FASTMT_OD_MCA_CG",
-	"USP_OPSCORE_FASTMT_OD_MCA_CGW",
-	"USP_OPSCORE_FASTMT_OD_MCA_W",
-	"USP_OPSCORE_FASTMT_OD_MCA_G",
-	"USP_OPSCORE_FASTMT_OD_MCA_GW"
-];
-//***************************************************************
-_caps = [
-	"USP_A2_BANDANA",
-	"USP_A2_BANDANA_RGR",
-	"USP_A2_BANDANA_DC",
-	"USP_A2_BANDANA_DC_RGR",
-	"USP_BASEBALL_CAP_BLK",
-	"USP_BASEBALL_CAP_PANTHERS",
-	"USP_BASEBALL_CAP_M81",
-	"USP_BASEBALL_CAPB_CT3_BLK",
-	"USP_BASEBALL_CAPB_CT3_M81",
-	"USP_BASEBALL_CAPB_CT3_PANTHERS",
-	"USP_BASEBALL_CAPB_BLK_D",
-	"USP_BASEBALL_CAPB_M81_D",
-	"USP_BASEBALL_CAP_CT3_BLK",
-	"USP_BASEBALL_CAP_CT3_M81",
-	"USP_BASEBALL_CAP_CT3_PANTHERS",
-	"USP_BASEBALL_CAP_BLK_D",
-	"USP_BASEBALL_CAP_M81_D",
-	"USP_THM_BEANIE",
-	"USP_THM_BEANIE_RGR",
-	"USP_THM_BEANIE_TAN",
-	"USP_THM_BEANIE_DC",
-	"USP_THM_BEANIE_DC_RGR",
-	"USP_THM_BEANIE_DC_TAN"
+	"USP_OPSCORE_FASTMT_FCV_OD",
+	"USP_OPSCORE_FASTMT_FCV",
+	"USP_OPSCORE_FASTMT_FCV_OD_C",
+	"USP_OPSCORE_FASTMT_FCV_C",
+	"USP_OPSCORE_FASTMT_FCV_OD_CG",
+	"USP_OPSCORE_FASTMT_FCV_CG",
+	"USP_OPSCORE_FASTMT_FCV_OD_G",
+	"USP_OPSCORE_FASTMT_FCV_G",
+	"MICH2000_Set_G_v2_m1",
+	"MICH2000_Set_G_v2_m3",
+	"MICH2000_Set_G_v6_m1",
+	"MICH2000_Set_G_v6_m3",
+	"MICH2000_Set_G_v8_m3",
+	"MICH2000_Set_G_v8_m1",
+	"MICH2000_Set_G_v3_m3",
+	"MICH2000_Set_G_v3_m1",
+	"MICH2001_Spec_set_P_v1_e2",
+	"MICH2001_Spec_set_P_v1_e1",
+	"MICH2001_Spec_set_P_v12_e2",
+	"MICH2001_Spec_set_P_v12_e1",
+	"MICH2001_Spec_set_P_v13_e2",
+	"MICH2001_Spec_set_P_v13_e1",
+	"MICH2001_Spec_set_P_v14_e2",
+	"MICH2001_Spec_set_P_v14_e1",
+	"MICH2001_Spec_set_P_v2_e2",
+	"MICH2001_Spec_set_P_v2_e1",
+	"MICH2001_Spec_set_P_v3_e2",
+	"MICH2001_Spec_set_P_v3_e1",
+	"MICH2001_Spec_set_P_v6_e2",
+	"MICH2001_Spec_set_P_v6_e1",
+	"MICH2001_Spec_set_P_v7_e2",
+	"MICH2001_Spec_set_P_v7_e1",
+	"MICH2001_Spec_set_P_v8_e2",
+	"MICH2001_Spec_set_P_v8_e1",
+	"MICH2001_Spec_set_P_v9_e2",
+	"MICH2001_Spec_set_P_v9_e1"
 ];
 
+_headgearHelicopters = [
+	"rhsusf_hgu56p_visor_black",
+	"rhsusf_hgu56p_visor_mask_black",
+	"rhsusf_hgu56p_visor_mask_Empire_black",
+	"rhsusf_hgu56p_visor_mask_black_skull",
+	"rhsusf_hgu56p_visor_mask_smiley",
+	"rhsusf_hgu56p_visor_tan",
+	"rhsusf_hgu56p_visor_mask_tan",
+	"rhsusf_hgu56p_visor",
+	"rhsusf_hgu56p_visor_mask",
+	"rhsusf_hgu56p_visor_mask_mo",
+	"rhsusf_hgu56p_visor_mask_skull",
+	"rhsusf_ihadss"
+];
+
+_headgearFixedWing = [
+	"HGU55P_MBU12P_Amber",
+	"HGU55P_MBU12P_Clear",
+	"HGU55P_MBU12P_Tinted",
+	"JHMCS_MBU12P",
+	"JHMCS_MBU14P",
+	"JHMCS2_MBU12P",
+	"JHMCS2_MBU20P",
+	"JHMCS2_MBU20P",
+	"JHMCS_MBU23P"
+];
 _facewear = [
+	"JK_MuttonChops_Black",
+	"JK_MuttonChops_DarkBrown",
+	"JK_MuttonChops",
+	"JK_MuttonChops_Black_NVG",
+	"JK_MuttonChops_DarkBrown_NVG",
+	"JK_MuttonChops_NVG",
+	"VSM_beard_1",
+	"VSM_beard_2",
+	"JK_CircleBeard_Black",
+	"JK_CircleBeard",
+	"JK_CircleBeard_DarkBrown",
+	"JK_FullBeard_Black",
+	"JK_FullBeard",
+	"JK_FullBeard_DarkBrown",
+	"JK_GoateeBeard_Black",
+	"JK_GoateeBeard",
+	"JK_GoateeBeard_DarkBrown",
+	"JK_NeckBeard_Black",
+	"JK_NeckBeard",
+	"JK_NeckBeard_DarkBrown",
+	"Beard_1",
+	"Beard_2",
+	"JK_CircleBeard_Black_NVG",
+	"JK_CircleBeard_NVG",
+	"JK_CircleBeard_DarkBrown_NVG",
+	"JK_FullBeard_Black_NVG",
+	"JK_FullBeard_NVG",
+	"JK_FullBeard_DarkBrown_NVG",
+	"JK_GoateeBeard_Black_NVG",
+	"JK_GoateeBeard_NVG",
+	"JK_GoateeBeard_DarkBrown_NVG",
+	"JK_NeckBeard_Black_NVG",
+	"JK_NeckBeard_NVG",
+	"JK_NeckBeard_DarkBrown_NVG",
 	"USP_SOLR_AF_OAK",
 	"USP_RAID_BLK2",
 	"USP_RAID_BLK",
@@ -319,24 +403,6 @@ _facewear = [
 	"USP_RAID_SMW1_BLK",
 	"USP_RAID_SMW3_BLK2",
 	"USP_RAID_SMW3_BLK",
-	"USP_RAID2_BLK2",
-	"USP_RAID2_BLK",
-	"USP_RAID2_SMB1_BLK2",
-	"USP_RAID2_SMB1_BLK",
-	"USP_RAID2_SMB3_BLK2",
-	"USP_RAID2_SMB3_BLK",
-	"USP_RAID2_SMC1_BLK2",
-	"USP_RAID2_SMC1_BLK",
-	"USP_RAID2_SMC3_BLK2",
-	"USP_RAID2_SMC3_BLK",
-	"USP_RAID2_SMG1_BLK2",
-	"USP_RAID2_SMG1_BLK",
-	"USP_RAID2_SMG3_BLK2",
-	"USP_RAID2_SMG3_BLK",
-	"USP_RAID2_SMW1_BLK2",
-	"USP_RAID2_SMW1_BLK",
-	"USP_RAID2_SMW3_BLK2",
-	"USP_RAID2_SMW3_BLK",
 	"USP_BALACLAVA_BLK",
 	"USP_BALACLAVA_CBR",
 	"USP_BALACLAVA_RGR",
@@ -423,7 +489,6 @@ _facewear = [
 	"USP_SHEMAGH2_CBR",
 	"USP_SHEMAGH2_RGR"
 ];
-
 _NVGs = [
 	"USP_NSEAS",
 	"USP_GPNVG18",
@@ -435,11 +500,29 @@ _NVGs = [
 	"USP_PVS31_HIGH",
 	"USP_PVS31_LOW"
 ];
-//WEAPONS AND AMMO ARRAYS 
-//*******************************************************************************
+_basicMedical = [
+	"nzf_FAK",
+	"kat_CaffeineItem",
+	"kat_Pulseoximeter"
+];
+_advancedMedical = [
+	"kat_accuvac",
+	"nzf_Medikit",
+	"kat_stethoscope",
+	"kat_Pulseoximeter"
+];
+_drugs = [
+	"kat_larynx",	
+	"ACE_personalAidKit",	
+	"kat_X_AED",
+	"kat_AED",
+	"kat_amiodarone",
+	"kat_lidocaine",
+	"kat_phenylephrine"
+];
 _ammo = [
-//Ammo 
 	"X26_Cartridge_Yellow",
+	"121_2Rnd_Slug",
 	"ACE_HuntIR_M203",
 	"ACE_7Rnd_408_305gr_Mag",
 	"Tier1_20Rnd_762x51_M118_Special_SR25_Mag",
@@ -464,114 +547,6 @@ _ammo = [
 	"rhsusf_50Rnd_762x51_m62_tracer",
 	"Tier1_250Rnd_762x51_Belt_M61_AP",
 	"Tier1_250Rnd_762x51_Belt_M62_Tracer",
-	"murshun_cigs_cigpack",
-	"murshun_cigs_lighter",
-//Throwables
-	"ACE_Chemlight_HiBlue",
-	"ACE_Chemlight_HiGreen",
-	"ACE_Chemlight_HiRed",
-	"ACE_Chemlight_HiWhite",
-	"ACE_Chemlight_HiYellow",
-	"ACE_Chemlight_IR",
-	"ACE_HandFlare_Green",
-	"ACE_HandFlare_Red",
-	"ACE_HandFlare_White",
-	"ACE_HandFlare_Yellow",
-	"ACE_M84",
-	"rhs_mag_an_m8hc",
-	"rhs_mag_m18_green",
-	"rhs_mag_m18_purple",
-	"rhs_mag_m18_red",
-	"rhs_mag_m18_yellow",
-	"rhs_mag_m67",
-	"MS_Strobe_Mag_1",
-	"MS_Strobe_Mag_2",
-//Explosives 
-	"rhsusf_m112_mag",
-	"rhsusf_m112x4_mag",
-//Misc
-	"ACE_HuntIR_monitor",
-	"ACE_RangeTable_82mm",
-	"ACE_artilleryTable",
-	"acex_intelitems_notepad",
-	"ACE_SpareBarrel",
-	"ACE_key_lockpick",
-	"ACE_key_west",
-	"rhsusf_bino_m24_ARD",
-	"ItemMap",
-	"ItemCompass",
-	"ATM_ALTIMETER",
-	"ACRE_PRC343",
-	"ACE_CableTie",
-	"ACE_Chemlight_Shield",
-	"ACE_EarPlugs",
-	"ACE_EntrenchingTool",
-	"ACE_Fortify",
-	"ACE_Flashlight_MX991",
-	"ItemAndroid",
-	"ItemcTabHCam",
-	"ACE_IR_Strobe_Item",
-	"ACE_Flashlight_XL50",
-	"ACE_MapTools",
-	"ACE_microDAGR",
-	"ACE_SpraypaintBlack",
-	"ACE_SpraypaintBlue",
-	"ACE_SpraypaintGreen",
-	"ACE_SpraypaintRed",
-	"ACE_wirecutter",
-	"Laserbatteries",
-	"ACRE_VHF30108SPIKE",
-	"ACRE_VHF30108MAST",
-	"nzf_headbag_inventory"
-];
-
-_basicMedical = [
-	"nzf_FAK",
-	"kat_CaffeineItem",
-	"kat_Pulseoximeter"
-];
-
-_advancedMedical = [
-	"vtx_stretcher_item",
-	"kat_accuvac",
-	"nzf_Medikit",
-	"kat_stethoscope",
-	"kat_Pulseoximeter"
-];
-
-_drugs = [
-	"kat_larynx",	
-	"ACE_personalAidKit",	
-	"kat_X_AED",
-	"kat_AED",
-	"kat_amiodarone",
-	"kat_lidocaine",
-	"kat_phenylephrine"
-];
-
-_pistols = [
-	"crow_x26_blk_yellow",
-	"Tier1_Glock19_Urban_TB",
-	"Tier1_Glock22_TB_Rail",
-	"Tier1_P320_TB",
-	"Tier1_P320_PMM",
-	"tier1_evo9",
-	"tier1_tirant9",
-	"tier1_tirant9s",
-	"tier1_agency_compensator",
-	"tier1_octane9",
-	"tier1_dbalpl",
-	"tier1_dbalpl_fl",
-	"tier1_tlr1",
-	"tier1_x300u",
-	"tier1_docter",
-	"tier1_mrds",
-	"tier1_sig_romeo1",
-	"tier1_docter_ris",
-	"tier1_microt1_low_black",
-	"tier1_microt2_low_black",
-	"tier1_romeo4t_bcd_low_black",
-	"tier1_romeo4t_bcq_low_black",
 	"Tier1_15Rnd_9x19_FMJ",
 	"Tier1_15Rnd_9x19_JHP",
 	"Tier1_20Rnd_9x19_FMJ",
@@ -599,52 +574,35 @@ _pistols = [
 	"rhs_mag_m715_Green",
 	"rhs_mag_m716_yellow"
 ];
-
-_launchers = [
-	"rhs_weap_fgm148",
-	"launch_NLAW_F",
-	"launch_MRAWS_green_F",
-	"MRAWS_HE_F",
-	"MRAWS_HEAT55_F",
-	"MRAWS_HEAT_F",
-	"rhs_weap_m72a7",
-	"rhs_weap_M136",
-	"rhs_weap_M136_hedp",
-	"rhs_weap_M136_hp"
+_throwablesExplosives = [
+	"ACE_Chemlight_HiBlue",
+	"ACE_Chemlight_HiGreen",
+	"ACE_Chemlight_HiRed",
+	"ACE_Chemlight_HiWhite",
+	"ACE_Chemlight_HiYellow",
+	"ACE_Chemlight_IR",
+	"ACE_HandFlare_Green",
+	"ACE_HandFlare_Red",
+	"ACE_HandFlare_White",
+	"ACE_HandFlare_Yellow",
+	"ACE_M84",
+	"rhs_mag_an_m8hc",
+	"rhs_mag_m18_green",
+	"rhs_mag_m18_purple",
+	"rhs_mag_m18_red",
+	"rhs_mag_m18_yellow",
+	"rhs_mag_m67",
+	"MS_Strobe_Mag_1",
+	"rhsusf_m112_mag",
+	"rhsusf_m112x4_mag"
 ];
-
-_marksmanRifles = [
-	"Tier1_SR25_EC_tan",
-	"Tier1_SR25_EC",
-	"Tier1_SR25_tan",
-	"Tier1_SR25",
-	"Tier1_M110k5_ACS",
-	"Tier1_M110k5",
-	"Tier1_M110k1_CTR",
-	"Tier1_M110k1",
-	"tier1_leupoldm3a_geissele_docter_tan",
-	"tier1_leupoldm3a_geissele_docter_black",
-	"tier1_leupoldm3a_adm_t2_tan",
-	"tier1_leupoldm3a_adm_t2_black",
-	"rhsusf_acc_nxs_3515x50f1_md_sun",
-	"tier1_anpvs10_tan",
-	"srifle_LRR_F",
-	"rhsusf_acc_nxs_3515x50f1_md_sun"
-	
+_pistols = [
+	"crow_x26_blk_yellow",
+	"Tier1_Glock19_Urban_TB",
+	"Tier1_Glock22_TB_Rail",
+	"Tier1_P320_TB",
+	"Tier1_P320_PMM"
 ];
-
-_machineguns = [
-	"rhs_weap_m240B",
-	"Tier1_MK46_Mod1_Savit_Desert",
-	"Tier1_MK46_Mod1_Savit",
-	"Tier1_MK46_Mod1_Desert",
-	"Tier1_MK46_Mod1",
-	"Tier1_MK46_Mod0_Para_Desert",
-	"Tier1_MK46_Mod0_Para",
-	"Tier1_MK46_Mod0_Desert",
-	"Tier1_MK46_Mod0"
-];
-
 _rifles = [
 	"rhs_weap_M320",
 	"Tier1_HK416D10_CTR",
@@ -769,8 +727,63 @@ _rifles = [
 	"rhs_weap_mk18_KAC_d", 
 	"rhs_weap_mk18_KAC"
 ];
+_riflesGrenadier = [
 
+];
+_marksmanRiflesAndScopes = [
+	"Tier1_SR25_EC_tan",
+	"Tier1_SR25_EC",
+	"Tier1_SR25_tan",
+	"Tier1_SR25",
+	"Tier1_M110k5_ACS",
+	"Tier1_M110k5",
+	"Tier1_M110k1_CTR",
+	"Tier1_M110k1",
+	"tier1_leupoldm3a_geissele_docter_tan",
+	"tier1_leupoldm3a_geissele_docter_black",
+	"tier1_leupoldm3a_adm_t2_tan",
+	"tier1_leupoldm3a_adm_t2_black",
+	"rhsusf_acc_nxs_3515x50f1_md_sun",
+	"tier1_anpvs10_tan",
+	"srifle_LRR_F",
+	"rhsusf_acc_nxs_3515x50f1_md_sun",
+	"tfb_atacr",
+	"tfb_atacr_lwts",
+	"tfb_atacr2",
+	"tfb_atacr2_lwts"
+];
+_machineGuns = [
+	"rhs_weap_m240B",
+	"Tier1_MK46_Mod1_Savit_Desert",
+	"Tier1_MK46_Mod1_Savit",
+	"Tier1_MK46_Mod1_Desert",
+	"Tier1_MK46_Mod1",
+	"Tier1_MK46_Mod0_Para_Desert",
+	"Tier1_MK46_Mod0_Para",
+	"Tier1_MK46_Mod0_Desert",
+	"Tier1_MK46_Mod0"
+];
+_launchers = [
+	"rhs_weap_fgm148",
+	"launch_NLAW_F",
+	"launch_MRAWS_green_F",
+	"MRAWS_HE_F",
+	"MRAWS_HEAT55_F",
+	"MRAWS_HEAT_F",
+	"rhs_weap_m72a7",
+	"rhs_weap_M136",
+	"rhs_weap_M136_hedp",
+	"rhs_weap_M136_hp"
+];
 _optics = [
+	"tier1_docter",
+	"tier1_mrds",
+	"tier1_sig_romeo1",
+	"tier1_docter_ris",
+	"tier1_microt1_low_black",
+	"tier1_microt2_low_black",
+	"tier1_romeo4t_bcd_low_black",
+	"tier1_romeo4t_bcq_low_black",
 	"skeetir_tws_pip",
 	"eotech_exps3_skeetir_down",
 	"elcan_specterdr_skeetir_down",
@@ -822,8 +835,16 @@ _optics = [
 	"tier1_razor_gen2_16_geissele_docter",
 	"tier1_razor_gen3_110_geissele_docter"
 ];
-
-_railAttachments = [
+_attachments = [
+	"tier1_evo9",
+	"tier1_tirant9",
+	"tier1_tirant9s",
+	"tier1_agency_compensator",
+	"tier1_octane9",
+	"tier1_dbalpl",
+	"tier1_dbalpl_fl",
+	"tier1_tlr1",
+	"tier1_x300u",
 	"tier1_harris_bipod_rvg_mlok_tan",
 	"tier1_harris_bipod_rvg_mlok_black",
 	"tier1_harris_bipod_kac_mlok_tan",
@@ -1173,215 +1194,64 @@ _railAttachments = [
 	"Tier1_SRD762_Desert",
 	"Tier1_SR25S_tan",
 	"Tier1_Octane9",
-	"Tier1_Evo9",
-	"Tier1_TiRant9",
-	"Tier1_TiRant9S",
-	"Tier1_Agency_Compensator",
 	"rhsusf_acc_rotex_mp7",
 	"rhsusf_acc_rotex_mp7_desert"
 ];
-//*******************************************************************************
 
-//Make the arsenal immovable and indestuctable, also clear contents.
+_blackfootWeaponsAndAmmo = [
+	"rhs_weap_ak105_zenitco01_b33",
+	"rhs_30Rnd_545x39_7U1_AK",
+	"rhs_acc_grip_ffg2",
+	"rhs_acc_ak5",
+	"rhs_acc_dtk4short",
+	"rhs_acc_tgpa",
+	"rhs_acc_okp7_picatinny",
+	"rhs_acc_ekp8_18",
+	"rhs_acc_1p87",
+	"rhs_acc_rakurspm",
+	"rhsusf_acc_anpeq15side_bk",
+	"rhs_weap_pb_6p9",
+	"rhs_acc_6p9_suppressor",
+	"rhs_mag_9x18_8_57N181S"
+];
+_miscAce = [
+	"murshun_cigs_cigpack",
+	"murshun_cigs_lighter",
+	"ACE_HuntIR_monitor",
+	"ACE_RangeTable_82mm",
+	"ACE_artilleryTable",
+	"acex_intelitems_notepad",
+	"ACE_SpareBarrel",
+	"ACE_key_lockpick",
+	"ACE_key_west",
+	"rhsusf_bino_m24_ARD",
+	"ItemMap",
+	"ItemCompass",
+	"ATM_ALTIMETER",
+	"ACRE_PRC343",
+	"ACE_CableTie",
+	"ACE_Chemlight_Shield",
+	"ACE_EarPlugs",
+	"ACE_EntrenchingTool",
+	"ACE_Fortify",
+	"ACE_Flashlight_MX991",
+	"ItemAndroid",
+	"ItemcTabHCam",
+	"ACE_IR_Strobe_Item",
+	"ACE_Flashlight_XL50",
+	"ACE_MapTools",
+	"ACE_microDAGR",
+	"ACE_SpraypaintBlack",
+	"ACE_SpraypaintBlue",
+	"ACE_SpraypaintGreen",
+	"ACE_SpraypaintRed",
+	"ACE_wirecutter",
+	"Laserbatteries",
+	"ACRE_VHF30108SPIKE",
+	"ACRE_VHF30108MAST",
+	"nzf_headbag_inventory"
+];
 
 
-//Make NZF beret available for members only 
-private "_beret";
-if (squadParams player select 0 select 0 == "NZF") then {_beret = ["nzf_beret_black_silver"]} else {_beret = [""]};
 
-//Get the players _rolePlayerand groupID
-
-
-//Check players _rolePlayerand prepare to populate arsenal
-if ("Training" in _playerRole) then {_role= "Training"};
-if ("Command" in _playerRole) then {_role= "Command"};
-if ("Leader" in _playerRole) then {_role= "Leader"};
-if ("JTAC" in _playerRole) then {_role= "JTAC"};
-if ("CLS" in _playerRole) then {_role= "CLS"}; 
-if ("Paramedic" in _playerRole) then {_role= "Medic"}; 
-if ("Pointman" in _playerRole) then {_role= "Pointman"}; 
-if ("EOD" in _playerRole) then {_role= "Engineer"; player setVariable ["ACE_isEngineer", 2, true]; player setUnitTrait ["explosiveSpecialist", true];}; 
-if ("Machinegunner" in _playerRole) then {_role= "Machinegunner"};
-if ("Marksman" in _playerRole) then {_role= "Marksman"};
-if ("Operator" in _playerRole) then {_role= "Operator"};
-if ("Helicopter" in _playerRole) then {_role= "Helicopter"; player setVariable ["ACE_isEngineer", 2, true];}; 
-if ("Fixed Wing" in _playerRole) then {_role= "Pilot"; player setVariable ["ACE_isEngineer", 2, true];}; 
-
-// Populate arsenal based on _rolePlayer
-//*******************************************************************************
-[player,true,false] call ace_arsenal_fnc_removeVirtualItems;
-switch (_role) do {
-
-	default {
-		[player, _beret + _ammo + _basicMedical + [
-					
-			],false] call ace_arsenal_fnc_addVirtualItems;
-	};
-
-	case "Training": {
-		[player, _beret + _ammo + _basicMedical + [
-				"USP_G3C_CU_KP_MC",
-				"V_Safety_yellow_F"
-			],false] call ace_arsenal_fnc_addVirtualItems; 
-	};
-
-	case "Command": {
-		[player, _beret + _multicamUniforms + _mcVestsLeader + _mcRadioPacks + _mcSmallBackpacks + _mcBigBackpacks + _mcHeadgear + _CBHeadgear + _ODHeadgear + _caps + _facewear + _NVGS + _ammo + _basicMedical + _pistols + _rifles + _optics + _railattachments + _launchers + [
-				"ACRE_PRC117F",
-				"ACRE_PRC152",
-				"ItemcTab",
-				"ACE_MX2A",
-				"ACE_Vector"
-			],false] call ace_arsenal_fnc_addVirtualItems; 
-	};
-
-	case "Leader": {
-		[player, _beret + _multicamUniforms + _mcVestsLeader + _mcRadiopacks + _mcSmallBackpacks + _mcBigBackpacks + _mcHeadgear + _CBHeadgear + _ODHeadgear + _caps + _facewear + _NVGS + _ammo + _basicMedical + _pistols + _rifles + _optics + _railattachments + _launchers + [
-				"ACRE_PRC152",
-				"ItemcTab",
-				"ACE_MX2A",
-				"ACE_Vector"
-			],false] call ace_arsenal_fnc_addVirtualItems; 
-	};
-
-	case "JTAC": {
-		[player, _beret + _multicamUniforms + _mcVestsComms +  _mcHeadgear + _CBHeadgear + _ODHeadgear + _caps + _facewear + _NVGS + _ammo + _basicMedical + _pistols + _rifles + _optics + _railattachments + _launchers + [
-				"ACRE_PRC117F",
-				"ACRE_PRC152",
-				"ItemcTab",
-				"Laserdesignator",
-				"ACE_MX2A",
-				"ACE_Vector",
-				"B_UavTerminal",
-				"sps_black_hornet_01_Static_F",
-				"asip_a_01_mc",
-				"satcom_01",
-				"GK_117G"
-			],false] call ace_arsenal_fnc_addVirtualItems; 
-	};
-
-	case "Medic": {
-		[player, _beret + _multicamUniforms + _mcVestsMedic + _mcMedicBackpacks + _mcHeadgear + _CBHeadgear + _ODHeadgear + _caps + _facewear + _NVGS + _ammo + _advancedMedical + _drugs + _pistols + _rifles + _optics + _railattachments + [
-				"RATS",
-				"WALK",
-				"immersion_pops_poppack"
-			],false] call ace_arsenal_fnc_addVirtualItems; 
-	};
-
-	case "CLS": {
-		[player, _beret + _multicamUniforms + _mcVestsMedic + _mcMedicBackpacks + _mcHeadgear + _CBHeadgear + _ODHeadgear + _caps + _facewear + _NVGS + _ammo + _advancedMedical + _pistols + _rifles + _optics + _railattachments + [
-				"immersion_pops_poppack"
-			],false] call ace_arsenal_fnc_addVirtualItems; 
-	};
-
-	case "Pointman": {
-		[player, _beret + _multicamUniforms + _mcOperatorVests + _mcSmallBackpacks + _mcBigBackpacks + _mcHeadgear + _CBHeadgear + _ODHeadgear + _caps + _facewear + _NVGS + _ammo + _basicMedical + _pistols + _rifles + _optics + _railattachments + _launchers + [
-				"121_serbu_breacher",
-				"121_2Rnd_Slug",
-				"tsp_frameCharge_mag",
-				"tsp_popperCharge_mag",
-				"tsp_popperCharge_auto_mag",
-				"tsp_stickCharge_mag",
-				"tsp_stickCharge_auto_mag",
-				"ACE_M26_Clacker",
-				"ACE_Clacker"
-			],false] call ace_arsenal_fnc_addVirtualItems; 
-	};
-	case "Engineer": {
-		[player, _beret + _multicamUniforms + _mcOperatorVests + _mcSmallBackpacks + _mcBigBackpacks + _mcHeadgear + _CBHeadgear + _ODHeadgear + _caps + _facewear + _NVGS + _ammo + _basicMedical + _pistols + _rifles + _optics + _railattachments + _launchers + [
-				"EOD_Uniform",
-				"EOD_SUIT_vest",
-				"EOD9_HELMET_Green",
-				"B_UavTerminal",
-				"B_UGV_02_Demining_backpack_F",
-				"ToolKit",
-				"ACE_DefusalKit",
-				"ACE_VMH3",
-				"ACE_M26_Clacker",
-				"ACE_Clacker"
-			],false] call ace_arsenal_fnc_addVirtualItems; 
-	};
-
-	case "Machinegunner": {
-		[player, _beret + _multicamUniforms + _mcVestsMachinegun + _mcSmallBackpacks + _mcBigBackpacks + _mcHeadgear + _CBHeadgear + _ODHeadgear + _caps + _facewear + _NVGS + _ammo + _basicMedical + _pistols + _machineguns + _optics + _railattachments + [
-					
-			],false] call ace_arsenal_fnc_addVirtualItems; 
-	};
-
-	case "Marksman": {
-		[player, _beret + _multicamUniforms + _mcOperatorVests + _mcSmallBackpacks + _mcBigBackpacks + _mcHeadgear + _CBHeadgear + _ODHeadgear + _caps + _facewear + _NVGS + _ammo + _basicMedical + _pistols + _marksmanRifles + _railattachments + [
-				
-				"tfb_atacr",
-				"tfb_atacr_lwts",
-				"tfb_atacr2",
-				"tfb_atacr2_lwts",
-				"ACE_ATragMX",
-				"ACE_Kestrel4500",
-				"ACRE_PRC152",
-				"Rangefinder",
-				"ACE_RangeCard",
-				"ACE_Tripod"
-			],false] call ace_arsenal_fnc_addVirtualItems; 
-	};
-
-	case "Operator": {
-		[player, _beret + _multicamUniforms + _mcOperatorVests + _mcSmallBackpacks + _mcBigBackpacks + _mcHeadgear + _CBHeadgear + _ODHeadgear + _facewear + _caps + _NVGS + _ammo + _basicMedical + _pistols + _rifles + _optics + _railattachments + _launchers +[
-				"B_UavTerminal",
-				"SwitchBlade_300_Tube_Desert",
-				"SwitchBlade_600_Tube_Desert"
-
-			],false] call ace_arsenal_fnc_addVirtualItems; 
-	};
-
-	case "Helicopter": {
-		[player, _beret + _NVGS + _ammo + _basicMedical + _pistols + _railattachments +[
-				"ACRE_PRC152",
-				"USP_G3C_CU_KP_GRY",
-				"USP_G3C_CU_KP_KHK",
-				"USP_G3C_CU_KP_RGR",
-				"USP_CRYE_CPC",
-				"USP_CRYE_CPC_MCB",
-				"USP_CRYE_CPC_RGR",
-				"rhsusf_hgu56p_visor_black",
-				"rhsusf_hgu56p_visor_mask_black",
-				"rhsusf_hgu56p_visor_mask_Empire_black",
-				"rhsusf_hgu56p_visor_mask_black_skull",
-				"rhsusf_hgu56p_visor_mask_smiley",
-				"rhsusf_hgu56p_visor_tan",
-				"rhsusf_hgu56p_visor_mask_tan",
-				"rhsusf_hgu56p_visor",
-				"rhsusf_hgu56p_visor_mask",
-				"rhsusf_hgu56p_visor_mask_mo",
-				"rhsusf_hgu56p_visor_mask_skull",
-				"rhsusf_ihadss",
-				"rhsusf_weap_MP7A2",
-				"rhsusf_weap_MP7A2_desert",
-				"rhsusf_acc_t1_low"
-			],false] call ace_arsenal_fnc_addVirtualItems; 
-	};
-
-	case "Pilot": {
-		[player, _beret + _NVGS + _ammo + _basicMedical + _pistols +[
-				"CSU13BPTan_Base_NG",
-				"CSU13BP_Base_NG",
-				"CSU15BPTan_Base_FG",
-				"CSU15BP_Base_FG",
-				"CMU33P",
-				"CMU33PTan",
-				"SV2B_LPU23P",
-				"SV2B_LPU36P",
-				"ACE_NonSteerableParachute",
-				"HGU55P_MBU12P_Amber",
-				"HGU55P_MBU12P_Clear",
-				"HGU55P_MBU12P_Tinted",
-				"JHMCS_MBU12P",
-				"JHMCS_MBU14P",
-				"JHMCS2_MBU12P",
-				"JHMCS2_MBU20P",
-				"JHMCS2_MBU20P",
-				"JHMCS_MBU23P"
-			],false] call ace_arsenal_fnc_addVirtualItems; 
-	};
-
-};
 

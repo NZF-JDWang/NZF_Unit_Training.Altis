@@ -96,3 +96,15 @@ class CfgRemoteExec
    };
 };
 //*****************************************************************************************************************
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "NO you are NOT 13 years old";
+		subtitle = "";
+		description = "We're here to run missions that people have put a lot of time into. We're not here to behave like children. Show more respect to those who built the missions and who step up to lead them so you and everyone else can have a good experience. Don't be that guy.";
+		pictureBackground = "";
+		picture = "media\images\JD_target.paa";
+		//pictureColor[] = { 0.0, 0.3, 0.6, 1 };
+	};
+};
