@@ -7,13 +7,13 @@
 [[-2,-1], [0,1,2,3,4,5,6,7]] call ace_spectator_fnc_updateVisionModes;
 
 //Load arsenals
-arsenal_1 execVM "arsenal\arsenal.sqf"; 
+//arsenal_1 execVM "arsenal\arsenal.sqf"; 
 
 _actionMenu = ["menu","Training Menu","",{execVM "scripts\trainingMenu.sqf"},{!(player inArea "BAS_zone_1")}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions"], _actionMenu] call ace_interact_menu_fnc_addActionToObject;
 
 //Make sure players come into the mission with only what we have the set as in the editor
-private _gameMaster = ["Trainer_1", "Trainer_2"];
+_gameMaster = ["Trainer_1", "Trainer_2"];
 if (vehicleVarName player in _gameMaster) then {} else {removeGoggles player};
 removeHeadgear player;
 
@@ -22,6 +22,7 @@ if (squadParams player select 0 select 0 == "NZF") then {player addHeadgear "nzf
 
 //Make players less visible to the AI 
 [] spawn NZF_fnc_camo;
+[player, ""] call BIS_fnc_setUnitInsignia;
 
 // Setup INCON Undercover 
 if (player getVariable ["isSneaky",false]) then {
@@ -35,13 +36,15 @@ params ["_unit"];
 
 _unit addEventHandler ["Killed", {
     params ["_unit"];
-    Mission_loadout = [getUnitLoadout _unit] call acre_api_fnc_filterUnitLoadout; 
+    Mission_loadout = [getUnitLoadout _unit] call acre_api_fnc_filterUnitLoadout;
 }];
 
 _unit addEventHandler ["Respawn", {
     params ["_unit"];
-    if (!isNil "Mission_loadout") then {_unit setUnitLoadout Mission_loadout;};
     [_unit, ""] call BIS_fnc_setUnitInsignia;
+    if (!isNil "Mission_loadout") then {
+        _unit setUnitLoadout Mission_loadout;
+		};
 }];
 
 //*************************************************************************************
@@ -68,3 +71,7 @@ Fn_IsRestrictedBoxForPlayerAccess = {
     };
 
 player addEventHandler ["InventoryOpened", Fn_IsRestrictedBoxForPlayerAccess];
+
+
+["ace_arsenal_displayClosed",{[arsenal_1, false] call ace_arsenal_fnc_removeBox}] call CBA_fnc_addEventHandler;
+arsenal_1 execVM "arsenal\arsenal.sqf";

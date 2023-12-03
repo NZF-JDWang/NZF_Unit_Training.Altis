@@ -5,31 +5,30 @@ _tempArray=[];
 
 // Takistan Insurgents
 	if (_faction==0) then {
-	_InfPool=	["UK3CB_TKM_O_AA","UK3CB_TKM_O_AA_ASST","UK3CB_TKM_O_AT","UK3CB_TKM_O_AT","UK3CB_TKM_O_AT","UK3CB_TKM_O_AR","UK3CB_TKM_O_AR","UK3CB_TKM_O_DEM","UK3CB_TKM_O_ENG","UK3CB_TKM_O_GL","UK3CB_TKM_O_IED","UK3CB_TKM_O_LAT","UK3CB_TKM_O_MG","UK3CB_TKM_O_MG_ASST","UK3CB_TKM_O_MK","UK3CB_TKM_O_MD","UK3CB_TKM_O_RIF_1","UK3CB_TKM_O_RIF_2","UK3CB_TKM_O_RIF_1","UK3CB_TKM_O_RIF_2","UK3CB_TKM_O_RIF_1","UK3CB_TKM_O_RIF_2","UK3CB_TKM_O_RIF_1","UK3CB_TKM_O_RIF_2","UK3CB_TKM_O_SL","UK3CB_TKM_O_TL"];	
-	_ArmPool=	["UK3CB_TKM_O_MTLB_PKT","UK3CB_TKM_O_BTR60"];
-	_MotPool=	["UK3CB_TKM_O_Datsun_Pkm","UK3CB_TKM_O_Hilux_Dshkm","UK3CB_TKM_O_Hilux_M2","UK3CB_TKM_O_Pickup_DSHKM","UK3CB_TKM_O_Hilux_Pkm","UK3CB_TKM_O_Hilux_Spg9","UK3CB_TKM_O_LR_M2","UK3CB_TKM_O_LR_SPG9","UK3CB_TKM_O_LR_SF_M2","UK3CB_TKM_O_Pickup_M2","UK3CB_TKM_O_Hilux_Zu23_Front"];
+	_InfPool=	["cfp_o_is_at","cfp_o_is_autorifleman","cfp_o_is_grenadier","cfp_o_is_irregular","cfp_o_is_machinegunner","cfp_o_is_medic","cfp_o_is_militaman","cfp_o_is_rifleman","cfp_o_is_sapper","cfp_o_is_squad_leader","cfp_o_is_team_leader"];	
+	_ArmPool=	["cfp_o_is_M113_flag","cfp_o_is_BMP1"];
+	_MotPool=	["CFP_O_IS_Hilux_DShKM_01","CFP_O_IS_Hilux_DSHKM_Armored_01","CFP_O_IS_Hilux_SPG_Armored_01","CFP_O_IS_Hilux_SPG_01","cfp_o_is_hmmwv_dshkm","cfp_o_is_jeep_lmg","cfp_o_is_LR_M2","cfp_o_is_offroad_flag","cfp_o_is_offroad_AT","cfp_o_is_offroad_M2","cfp_o_is_pickup_PK","cfp_o_is_pickup_PK_flag"];
 	_ACHPool=	[];
 	_CHPool=	[];
 	_uavPool=	[];
-	_stPool=	["UK3CB_TKM_O_2b14_82mm","UK3CB_TKM_O_Igla_AA_pod","UK3CB_TKM_O_DSHkM_Mini_TriPod","UK3CB_TKM_O_DSHkM_Mini_TriPod","UK3CB_TKM_O_KORD","UK3CB_TKM_O_NSV","UK3CB_TKM_O_PKM_Low","UK3CB_TKM_O_PKM_Low","UK3CB_TKM_O_PKM_Low","UK3CB_TKM_O_SPG9"];
+	_stPool=	["cfp_o_is_2b14_82mm","cfp_o_is_DSHkM_Mini_TriPod","cfp_o_is_DSHKM","cfp_o_is_KORD","cfp_o_is_KORD_high","cfp_o_is_M2Static","cfp_o_is_M2Static_MiniTripod","cfp_o_is_M252","cfp_o_is_SPG9","cfp_o_is_TOW","cfp_o_is_ZU23"];
 	_shipPool=	[];
 	_diverPool=	[];
-	_crewPool=	["UK3CB_TKM_O_RIF_1","UK3CB_TKM_O_RIF_2"];
+	_crewPool=	["cfp_o_is_crewman","cfp_o_is_crewman"];
 	_heliCrew=	[];
 };
 // AAF FACTION	
 	if (_faction==1) then {
-	_InfPool=	["UK3CB_AAF_I_RIF_2","UK3CB_AAF_I_RIF_1","UK3CB_AAF_I_RIF_2","UK3CB_AAF_I_RIF_1","UK3CB_AAF_I_SL","UK3CB_AAF_I_MD","UK3CB_AAF_I_MK","UK3CB_AAF_I_MG","UK3CB_AAF_I_LAT","UK3CB_AAF_I_ENG","UK3CB_AAF_I_AR","UK3CB_AAF_I_AT","UK3CB_AAF_I_AA"];	
-	_ArmPool=	["UK3CB_AAF_I_BTR60","UK3CB_AAF_I_BMP2","UK3CB_AAF_I_BTR70","UK3CB_AAF_I_M113_M2","UK3CB_AAF_I_FV4201","UK3CB_AAF_I_M60A1","UK3CB_AAF_I_T55","UK3CB_AAF_I_T72BB","UK3CB_AAF_I_BTR60","UK3CB_AAF_I_BMP2","UK3CB_AAF_I_BTR70",
-"UK3CB_AAF_I_M113_M2"];
-	_MotPool=	["UK3CB_AAF_I_LR_M2","UK3CB_AAF_I_LR_SF_M2","UK3CB_AAF_I_Offroad_M2","UK3CB_AAF_I_Pickup_DSHKM","UK3CB_AAF_I_UAZ_MG"];
+	_InfPool=	["cfp_o_is_at","cfp_o_is_autorifleman","cfp_o_is_grenadier","cfp_o_is_irregular","cfp_o_is_machinegunner","cfp_o_is_medic","cfp_o_is_militaman","cfp_o_is_rifleman","cfp_o_is_sapper","cfp_o_is_squad_leader","cfp_o_is_team_leader"];	
+	_ArmPool=	["cfp_o_is_M113_flag","cfp_o_is_BMP1","cfp_o_is_BMP2","cfp_o_is_BMP1"];
+	_MotPool=	["CFP_O_IS_Hilux_DShKM_01","CFP_O_IS_Hilux_DSHKM_Armored_01","CFP_O_IS_Hilux_SPG_Armored_01","CFP_O_IS_Hilux_SPG_01","cfp_o_is_hmmwv_dshkm","cfp_o_is_jeep_lmg","cfp_o_is_LR_M2","cfp_o_is_offroad_flag","cfp_o_is_offroad_AT","cfp_o_is_offroad_M2","cfp_o_is_pickup_PK","cfp_o_is_pickup_PK_flag"];
 	_ACHPool=	[];
 	_CHPool=	[];
 	_uavPool=	[];
-	_stPool=	["UK3CB_AAF_I_DSHkM_Mini_TriPod","UK3CB_AAF_I_M240_Low","UK3CB_AAF_I_M2_MiniTripod"];
+	_stPool=	["cfp_o_is_2b14_82mm","cfp_o_is_DSHkM_Mini_TriPod","cfp_o_is_DSHKM","cfp_o_is_KORD","cfp_o_is_KORD_high","cfp_o_is_M2Static","cfp_o_is_M2Static_MiniTripod","cfp_o_is_M252","cfp_o_is_SPG9","cfp_o_is_TOW","cfp_o_is_ZU23"];
 	_shipPool=	[];
 	_diverPool=	[];
-	_crewPool=	["UK3CB_AAF_I_RIF_2","UK3CB_AAF_I_RIF_1"];
+	_crewPool=	["cfp_o_is_crewman","cfp_o_is_crewman"];
 	_heliCrew=	[];
 };
 
