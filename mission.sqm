@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=4111;
+		nextID=4267;
 	};
 	class Camera
 	{
 		pos[]={14663.898,46.089836,16791.33};
-		dir[]={-0.28871799,-0.32676473,-0.89993125};
-		up[]={-0.099822514,0.94510615,-0.31114545};
-		aside[]={-0.95220268,9.132782e-008,0.30548745};
+		dir[]={-0.28871697,-0.32676315,-0.89992696};
+		up[]={-0.099821657,0.94510627,-0.31114277};
+		aside[]={-0.9521966,0,0.30548626};
 	};
 };
 binarizationWanted=0;
@@ -99282,7 +99282,7 @@ class Mission
 					};
 					id=2516;
 					type="Land_PortableDesk_01_sand_F";
-					atlOffset=0.0026752949;
+					atlOffset=0.00041055679;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -99526,7 +99526,7 @@ class Mission
 				};
 			};
 			id=2523;
-			atlOffset=33.792;
+			atlOffset=33.791588;
 		};
 		class Item47
 		{
@@ -106028,7 +106028,6 @@ class Mission
 					};
 					id=2802;
 					type="Land_CampingChair_V2_white_F";
-					atlOffset=0.0014276505;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -106056,14 +106055,13 @@ class Mission
 						angles[]={0,3.5027885,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						init="[this, false, [0, 0, 0], 0] call ace_dragging_fnc_setDraggable; " \n "[this, false, [0, 0, 0], 0] call ace_dragging_fnc_setCarryable;";
 					};
 					id=2812;
 					type="Land_CampingChair_V2_white_F";
-					atlOffset=0.00093173981;
+					atlOffset=0.37691689;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -106097,7 +106095,7 @@ class Mission
 					};
 					id=2813;
 					type="Land_CampingChair_V2_white_F";
-					atlOffset=0.35176563;
+					atlOffset=0.35310745;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -106131,7 +106129,7 @@ class Mission
 					};
 					id=2815;
 					type="Land_CampingChair_V2_white_F";
-					atlOffset=0.28943157;
+					atlOffset=0.29090977;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -106166,7 +106164,7 @@ class Mission
 					};
 					id=2816;
 					type="Land_CampingChair_V2_white_F";
-					atlOffset=0.0016021729;
+					atlOffset=0.00018501282;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -106201,7 +106199,6 @@ class Mission
 					};
 					id=2818;
 					type="Land_CampingChair_V2_white_F";
-					atlOffset=0.00141716;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -106236,7 +106233,7 @@ class Mission
 					};
 					id=2819;
 					type="Land_CampingChair_V2_white_F";
-					atlOffset=0.001871109;
+					atlOffset=0.00045394897;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -106271,7 +106268,7 @@ class Mission
 					};
 					id=2821;
 					type="Land_CampingChair_V2_white_F";
-					atlOffset=0.0017337799;
+					atlOffset=0.00031661987;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -106299,7 +106296,6 @@ class Mission
 						angles[]={0,3.5183046,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						init="[this, false, [0, 0, 0], 0] call ace_dragging_fnc_setDraggable; " \n "[this, false, [0, 0, 0], 0] call ace_dragging_fnc_setCarryable;";
@@ -106308,7 +106304,7 @@ class Mission
 					};
 					id=2811;
 					type="Land_CampingTable_white_F";
-					atlOffset=0.00087070465;
+					atlOffset=0.43847561;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -106679,7 +106675,7 @@ class Mission
 				};
 			};
 			id=2824;
-			atlOffset=0.95482826;
+			atlOffset=0.95482635;
 		};
 		class Item65
 		{
@@ -112468,6 +112464,7 @@ class Mission
 						angles[]={0,6.2488198,0};
 					};
 					side="Independent";
+					flags=4;
 					class Attributes
 					{
 						init="this disableAI ""PATH"";" \n "this setunitPOS ""UP"";" \n "this addEventHandler [""Fired"", { " \n "    params [""_unit"", """", ""_muzzle"", """", """", ""_magazine""]; " \n "    if (!local  _unit) exitWith {}; " \n " " \n "    private _ammo = _unit ammo _muzzle; " \n " " \n "    if (_ammo == 0) then { " \n "        _unit addMagazine _magazine; " \n "    }; " \n "}];";
@@ -112476,7 +112473,7 @@ class Mission
 					};
 					id=3427;
 					type="cfp_i_is_machinegunner";
-					atlOffset=4.2070007;
+					atlOffset=3.4332275e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -113439,6 +113436,7 @@ class Mission
 						angles[]={0,2.248909,0};
 					};
 					side="Independent";
+					flags=4;
 					class Attributes
 					{
 						init="this disableAI ""PATH"";" \n "this setunitPOS ""MIDDLE"";" \n "this addEventHandler [""Fired"", { " \n "    params [""_unit"", """", ""_muzzle"", """", """", ""_magazine""]; " \n "    if (!local  _unit) exitWith {}; " \n " " \n "    private _ammo = _unit ammo _muzzle; " \n " " \n "    if (_ammo == 0) then { " \n "        _unit addMagazine _magazine; " \n "    }; " \n "}];";
@@ -113447,7 +113445,7 @@ class Mission
 					};
 					id=3431;
 					type="cfp_i_is_rifleman";
-					atlOffset=4.3000011;
+					atlOffset=0.00022029877;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -113778,7 +113776,7 @@ class Mission
 					};
 					id=3505;
 					type="cfp_i_is_rifleman";
-					atlOffset=7.3942962;
+					atlOffset=3.4947987;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -113970,7 +113968,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=3220;
-			atlOffset=7.3942962;
+			atlOffset=3.4947987;
 		};
 		class Item120
 		{

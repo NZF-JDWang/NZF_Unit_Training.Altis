@@ -72,7 +72,7 @@ nzf_roles = [
     "Pararescue",
     "Breacher",
     "Intel Operator",
-    "Machinegunner",
+    "MachineGunner",
     "Marksman",
     "Operator",
     "Helicopter Pilot/Crew",
