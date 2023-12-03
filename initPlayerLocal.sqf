@@ -13,14 +13,15 @@ _actionMenu = ["menu","Training Menu","",{execVM "scripts\trainingMenu.sqf"},{!(
 [player, 1, ["ACE_SelfActions"], _actionMenu] call ace_interact_menu_fnc_addActionToObject;
 
 //Make sure players come into the mission with only what we have the set as in the editor
-_gameMaster = ["ZEUS"];
+private _gameMaster = ["Trainer_1", "Trainer_2"];
 if (vehicleVarName player in _gameMaster) then {} else {removeGoggles player};
 removeHeadgear player;
 
 //Now check if they're in the Unit and if so give them a NZF beret
 if (squadParams player select 0 select 0 == "NZF") then {player addHeadgear "nzf_beret_black_silver"} else {player addHeadgear ""};
 
-//Make players less visible to the AI and add the blood patch 
+//Make players less visible to the AI 
+[] spawn NZF_fnc_camo;
 
 // Setup INCON Undercover 
 if (player getVariable ["isSneaky",false]) then {
@@ -34,35 +35,18 @@ params ["_unit"];
 
 _unit addEventHandler ["Killed", {
     params ["_unit"];
-    Mission_loadout = [getUnitLoadout _unit] call acre_api_fnc_filterUnitLoadout;
+    Mission_loadout = [getUnitLoadout _unit] call acre_api_fnc_filterUnitLoadout; 
 }];
 
 _unit addEventHandler ["Respawn", {
     params ["_unit"];
-    _unit spawn NZF_fnc_bloodpatch;
-    if (!isNil "Mission_loadout") then {
-        _unit setUnitLoadout Mission_loadout;
-		};
+    if (!isNil "Mission_loadout") then {_unit setUnitLoadout Mission_loadout;};
+    [_unit, ""] call BIS_fnc_setUnitInsignia;
 }];
 
 //*************************************************************************************
-//Add arsenal self interaction to players when within 10m of arsenal
-/*
-_condition = {
-    _player distance arsenal_1 < 10;
-};
-_statement = {
-    arsenal_1 execVM "scripts\arsenal.sqf";
-    [arsenal_1,player,false] call ace_arsenal_fnc_openBox;
-};
-_action = ["Open Arsenal","Open Arsenal","\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\armor_ca.paa",_statement,_condition] call ace_interact_menu_fnc_createAction;
-[player, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
-
-//*************************************************************************************
-
-//*************************************************************************************
 //Fix swivel targets 
-*/
+
 _targets = [swivelTarget_1, swivelTarget_2, swivelTarget_3, swivelTarget_4, swivelTarget_5, swivelTarget_6, swivelTarget_7, swivelTarget_8, swivelTarget_9, swivelTarget_10, swivelTarget_11];
 {_x setVariable ["BIS_exitScript", true];} forEach _targets;
 
@@ -78,3 +62,9 @@ addMissionEventHandler
 	}	
 ];
 
+Fn_IsRestrictedBoxForPlayerAccess = { 
+	params ["_unt", "_box"]; 
+    player getvariable "Ace_medical_medicClass" < 2 && typeOf _box == "nzf_NZBloodbox";
+    };
+
+player addEventHandler ["InventoryOpened", Fn_IsRestrictedBoxForPlayerAccess];

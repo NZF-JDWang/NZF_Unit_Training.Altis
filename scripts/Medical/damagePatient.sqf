@@ -16,6 +16,7 @@ if (isNull _patient) exitWith {};
   ];
 
 _bloodtype = selectRandom ["O", "A", "B", "AB","O_N", "A_N", "B_N", "AB_N"];
+_pneumoSeverity = ((random 4)+1);
 _patient setVariable ["kat_circulation_bloodtype", _bloodtype, true];
 
 switch (_difficulty) do
@@ -52,8 +53,8 @@ switch (_difficulty) do
 		{_patient setVariable ["KAT_airway_occluded", true, true]};
 
 		[_patient, 0.5] call ace_medical_status_fnc_adjustPainLevel;
+		_patient setVariable ["KAT_breathing_pneumothorax", _pneumoSeverity, true]; 
 		[_patient] call kat_breathing_fnc_handleBreathing;
-		_patient setVariable ["KAT_breathing_pneumothorax", true, true]; 
   };
   case 3:
   {
@@ -70,29 +71,29 @@ switch (_difficulty) do
 		{_patient setVariable ["KAT_airway_occluded", true, true]};
 
 	  	[_patient, 0.7] call ace_medical_status_fnc_adjustPainLevel;
+		_patient setVariable ["KAT_breathing_hemopneumothorax", _pneumoSeverity, true];
 		[_patient] call kat_breathing_fnc_handleBreathing;
-		_patient setVariable ["KAT_breathing_hemopneumothorax", true, true];
   };
 
   case 4:
 	  {
 		[_patient, 3, "body", "bullet"] call ace_medical_fnc_addDamageToUnit;
 		[_patient, 0.5] call ace_medical_status_fnc_adjustPainLevel;
+		_patient setVariable ["KAT_breathing_pneumothorax", _pneumoSeverity, true];
 		[_patient] call kat_breathing_fnc_handleBreathing;
-		_patient setVariable ["KAT_breathing_pneumothorax", true, true];
  	 };
   case 5:
 	  {
 		[_patient, 3, "body", "bullet"] call ace_medical_fnc_addDamageToUnit;
 		[_patient, 0.7] call ace_medical_status_fnc_adjustPainLevel;
+		_patient setVariable ["KAT_breathing_hemopneumothorax", _pneumoSeverity, true];
 		[_patient] call kat_breathing_fnc_handleBreathing;
-		_patient setVariable ["KAT_breathing_hemopneumothorax", true, true];
  	 };
   case 6:
  	 {
 		[_patient, 3, "body", "bullet"] call ace_medical_fnc_addDamageToUnit;
 	  	[_patient, 0.7] call ace_medical_status_fnc_adjustPainLevel;
+		_patient setVariable ["KAT_breathing_tensionpneumothorax", _pneumoSeverity, true];
 		[_patient] call kat_breathing_fnc_handleBreathing;
-		_patient setVariable ["KAT_breathing_tensionpneumothorax", true, true];
 	};
 };

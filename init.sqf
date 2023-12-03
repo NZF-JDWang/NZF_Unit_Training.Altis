@@ -23,6 +23,21 @@ heloMarkers = ["marker_3", "marker_4", "marker_5", "marker_6", "marker_7", "mark
     };
 };
 
+["vtx_stretcher_1", "InitPost", {
+    [(_this # 0), false] call ace_dragging_fnc_setDraggable;
+    [(_this # 0 ), true, [0,1,0], 90, true] call ace_dragging_fnc_setCarryable;    
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+["vtx_stretcher_2", "InitPost", {
+    [(_this # 0), false] call ace_dragging_fnc_setDraggable;
+    [(_this # 0 ), true, [0,1,0], 90, true] call ace_dragging_fnc_setCarryable;    
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+["vtx_stretcher_3", "InitPost", {
+    [(_this # 0), false] call ace_dragging_fnc_setDraggable;
+    [(_this # 0 ), true, [0,1,0], 90, true] call ace_dragging_fnc_setCarryable;    
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
 stretcher_1 setVariable ["discharge", true, true];
 stretcher_2 setVariable ["discharge", true, true];
 stretcher_3 setVariable ["discharge", true, true];
@@ -55,7 +70,7 @@ nzf_roles = [
     "Team Leader",
     "JTAC",
     "CLS",
-    "Paramedic",
+    "Pararescue",
     "Pointman",
     "EOD/Engineer",
     "Machinegunner",
